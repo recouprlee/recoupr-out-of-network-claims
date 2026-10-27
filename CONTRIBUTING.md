@@ -28,6 +28,13 @@ A second mirror under the generated skill folder's `skills/` directory lets the
 installed Claude Code CLI validate that folder directly. The ZIP is created
 before that validator-only mirror and contains one portable skill folder.
 
+## Personal data scan
+
+Reference files describe insurers, which have phone numbers and capitalized
+names. They never hold a person's data. The scan permits those two patterns in
+reference files, but email, birth date, identifier-value and SSN patterns still
+run on them.
+
 Fixtures use obvious `SENTINEL_` tokens for every person-like field. Seeded
 scanner fixtures must also carry an obvious sentinel marker. Never use a real
 name, birth date, address, contact value, member ID, policy ID or claim ID.

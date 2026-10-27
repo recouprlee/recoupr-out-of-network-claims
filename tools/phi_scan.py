@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
 """Scan files for person-shaped data without printing matched text."""
 
+# Reference files describe insurers, which have public phone numbers and
+# capitalized names. They never hold a person's data, so those two patterns are
+# skipped there while email, date, identifier-value and SSN patterns still run.
+
 import argparse
 import os
 import re
@@ -34,6 +38,8 @@ PHONE_RE = re.compile(
     r"(?<!\d)(?:\(\d{3}\)|\d{3})[ .-]?\d{3}[ .-]?\d{4}(?!\d)"
 )
 IGNORED_DIRECTORY_NAMES = {".git", "dist", "__pycache__"}
+REPOSITORY_ROOT = Path(__file__).resolve().parents[1]
+SKILL_NAME = "recoupr-out-of-network-claims"
 
 
 def mask_spans(value, spans):
@@ -87,7 +93,7 @@ def has_name_beside_identifier(line):
     return CAPITALIZED_NAME_RE.search(candidate) is not None
 
 
-def has_contact(line):
+def has_contact(line, allow_phone=False):
     for match in EMAIL_RE.finditer(line):
         address = match.group(0)
         local, domain = address.rsplit("@", 1)
@@ -96,10 +102,12 @@ def has_contact(line):
         if domain.lower() in {"recoupr.ai", "example.org"}:
             continue
         return True
+    if allow_phone:
+        return False
     return PHONE_RE.search(line) is not None
 
 
-def patterns_for_line(line):
+def patterns_for_line(line, insurer_reference=False):
     candidate = mask_sentinels(line)
     hits = []
     if has_dob(candidate):
@@ -108,11 +116,25 @@ def patterns_for_line(line):
         hits.append("member-id")
     if SSN_RE.search(candidate):
         hits.append("ssn")
-    if has_name_beside_identifier(candidate):
+    if not insurer_reference and has_name_beside_identifier(candidate):
         hits.append("name-beside-id")
-    if has_contact(candidate):
+    if has_contact(candidate, allow_phone=insurer_reference):
         hits.append("contact")
     return hits
+
+
+def is_insurer_reference_path(path):
+    try:
+        parts = path.resolve().relative_to(REPOSITORY_ROOT).parts
+    except ValueError:
+        return False
+    prefixes = (
+        ("src", "references"),
+        ("skills", SKILL_NAME, "references"),
+        ("dist", SKILL_NAME, "references"),
+        ("dist", SKILL_NAME, "skills", SKILL_NAME, "references"),
+    )
+    return any(parts[: len(prefix)] == prefix for prefix in prefixes)
 
 
 def is_seeded_path(path):
@@ -164,8 +186,9 @@ def scan_file(path):
     except UnicodeDecodeError:
         return []
     hits = []
+    insurer_reference = is_insurer_reference_path(path)
     for line_number, line in enumerate(text.splitlines(), start=1):
-        for pattern in patterns_for_line(line):
+        for pattern in patterns_for_line(line, insurer_reference=insurer_reference):
             hits.append((path, line_number, pattern))
     return hits
 
