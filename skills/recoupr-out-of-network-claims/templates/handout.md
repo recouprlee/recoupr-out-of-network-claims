@@ -34,6 +34,8 @@ Atlas source: {{source_url}}
 
 Confirm the current route and deadline on the insurer's own claims page before sending.
 
+This handout was prepared by your client with free software from recoupr.ai. recoupr is not your billing service and has no relationship with your practice.
+
 ## Ask member services about benefits
 
 1. Is out-of-network outpatient psychotherapy covered for CPT 90837, 90834, and 90791?
