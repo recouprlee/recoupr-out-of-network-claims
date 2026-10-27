@@ -1,8 +1,6 @@
-> The founder must approve this document before publication or use.
-
 # Changelog
 
-## 0.1.0 - <release date>
+## 0.1.0, 10-27-2026
 
 ### Seven routines
 

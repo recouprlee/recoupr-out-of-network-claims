@@ -1,5 +1,3 @@
-> The founder must approve this document before publication or use.
-
 # Door tests
 
 Live tests of the doors, recorded as they happen (each line carries its date):

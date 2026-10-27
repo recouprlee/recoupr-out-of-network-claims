@@ -8,3 +8,5 @@ limit participation when needed.
 
 Report conduct concerns through the repository's private maintainer contact
 route. Do not put personal or health information in a report.
+
+Report a concern to howdy@recoupr.ai.

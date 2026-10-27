@@ -1,5 +1,3 @@
-> The founder must approve this document before publication or use.
-
 # Your superbill should be the start, not the end
 
 By Lee Knight
@@ -35,11 +33,11 @@ Each insurer row records its source URL and read date. Missing public details st
 ## Four ways to use it
 
 1. Start at https://recoupr.ai/get-the-skill. The page puts the available doors in one place and explains what to download.
-2. Use the one-step install line: `/plugin install recoupr-out-of-network-claims --marketplace recouprlee/recoupr-out-of-network-claims`. VERIFY AT LAUNCH.
+2. In Claude Code, use the one-step install line: `/plugin install recoupr-out-of-network-claims --marketplace recouprlee/recoupr-out-of-network-claims`.
+3. Download the ZIP from the latest release. The `SKILL.md` inside it is only the menu; the routines and references sit beside it. An assistant that takes one file gets the paste-in prompt, which carries the routines and asks the person for their insurer page at https://recoupr.ai/insurers/ when a route is needed.
+4. Download the paste-in prompt from the latest release and attach it to your first message. It is the one-file door for any assistant.
 
 Live tests of each door, with dates and results, are kept in `docs/door-tests.md`.
-3. Download the ZIP from the latest release. The `SKILL.md` inside it is only the menu; the routines and references sit beside it. An assistant that takes one file gets the paste-in prompt, which carries the routines and asks the person for their insurer page at https://recoupr.ai/insurers/ when a route is needed.
-4. Copy the paste-in prompt from the latest release. It is the text door for an assistant that accepts a pasted instruction.
 
 Whichever door a person chooses, the boundary is the same. The skill prepares. The person checks. The person submits. Nobody is charged for the skill.
 

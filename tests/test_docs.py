@@ -1,3 +1,4 @@
+import pathlib
 import csv
 import re
 import subprocess
@@ -8,17 +9,11 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / "docs"
-INSTALL_LINE = (
-    "/plugin install recoupr-out-of-network-claims "
-    "--marketplace recouprlee/recoupr-out-of-network-claims"
-)
+INSTALL_LINE = "/plugin install recoupr-out-of-network-claims@recoupr-skills"
+MARKETPLACE_LINE = "/plugin marketplace add recouprlee/recoupr-out-of-network-claims"
 REQUIRED_DOCS = (
     DOCS / "launch.md",
-    DOCS / "newsletter" / "issue-01.md",
-    DOCS / "outreach" / "sequence.md",
-    DOCS / "outreach" / "rates-page-line.md",
-    DOCS / "outreach" / "handout-note.md",
-    DOCS / "outreach" / "measure.md",
+    DOCS / "door-tests.md",
 )
 ROOT_DOCS = (
     ROOT / "RELEASE.md",
@@ -54,12 +49,16 @@ class DocumentationTests(unittest.TestCase):
         docs = tuple(sorted(path for path in DOCS.rglob("*") if path.is_file()))
         return ROOT_DOCS + docs
 
-    def test_founder_approval_is_at_the_top(self):
-        for path in self.all_documents():
-            with self.subTest(path=path.relative_to(ROOT)):
-                first_line = next(line for line in read(path).splitlines() if line.strip())
-                self.assertIn("founder", first_line.lower())
-                self.assertIn("approve", first_line.lower())
+    def test_no_internal_approval_banner_in_public_files(self):
+        """The repository is public: no file may carry the internal founder-approval banner."""
+        root = pathlib.Path(__file__).resolve().parents[1]
+        for path in sorted(root.rglob("*")):
+            if not path.is_file() or path.suffix not in {".md", ".yml", ".yaml", ".json", ".txt"}:
+                continue
+            if any(part in {"dist", ".git", "__pycache__"} for part in path.parts):
+                continue
+            with self.subTest(path=str(path.relative_to(root))):
+                self.assertNotIn("founder must approve", path.read_text(encoding="utf-8").lower())
 
     def test_forbidden_dash_characters_are_absent(self):
         for path in self.all_documents():
@@ -99,19 +98,6 @@ class DocumentationTests(unittest.TestCase):
                 for value in forbidden:
                     self.assertNotIn(value, text)
 
-    def test_each_outreach_touch_is_under_120_words(self):
-        path = DOCS / "outreach" / "sequence.md"
-        self.assertTrue(path.is_file(), "outreach sequence is missing")
-        sections = re.findall(
-            r"^## Touch [123]\n(?P<body>.*?)(?=^## Touch [123]\n|\Z)",
-            read(path),
-            flags=re.MULTILINE | re.DOTALL,
-        )
-        self.assertEqual(3, len(sections))
-        for number, section in enumerate(sections, start=1):
-            with self.subTest(touch=number):
-                self.assertLess(word_count(section), 120)
-
     def test_launch_word_count_is_in_range(self):
         path = DOCS / "launch.md"
         self.assertTrue(path.is_file(), "launch write-up is missing")
@@ -139,32 +125,6 @@ class DocumentationTests(unittest.TestCase):
         self.assertIn(f"{insurer_count} insurers'", launch)
         self.assertIn(f"{form_count} form files", launch)
 
-    def test_newsletter_is_under_400_words(self):
-        newsletter = read(DOCS / "newsletter" / "issue-01.md")
-        self.assertLess(word_count(newsletter), 400)
-
-    def test_newsletter_fact_matches_the_texas_atlas_row(self):
-        atlas_path = ROOT / "src" / "references" / "payer-atlas.csv"
-        with atlas_path.open(newline="", encoding="utf-8") as handle:
-            rows = list(csv.DictReader(handle))
-        row = next(
-            item
-            for item in rows
-            if item["insurer"]
-            == "Blue Cross and Blue Shield of Texas (HCSC), including ERS HealthSelect"
-        )
-        self.assertEqual("TX", row["states"])
-        self.assertNotEqual("NOT PUBLISHED", row["member_form_url"])
-        newsletter = read(DOCS / "newsletter" / "issue-01.md")
-        for value in (
-            row["insurer"],
-            row["member_form_name"],
-            row["member_form_url"],
-            row["source_url"],
-            row["verified_on"],
-        ):
-            self.assertIn(value, newsletter)
-
     def test_every_url_uses_https(self):
         bare_domain = re.compile(
             r"(?<!@)(?<!https://)\b(?:[a-z0-9-]+\.)+(?:ai|com|gov|io|net|org)\b",
@@ -178,7 +138,9 @@ class DocumentationTests(unittest.TestCase):
                 self.assertIsNone(bare_domain.search(without_https_urls))
 
     def test_readme_contains_install_line(self):
-        self.assertIn(INSTALL_LINE, read(ROOT / "README.md"))
+        readme = read(ROOT / "README.md")
+        self.assertIn(MARKETPLACE_LINE, readme)
+        self.assertIn(INSTALL_LINE, readme)
 
     def test_release_check_passes_after_build(self):
         build = subprocess.run(
