@@ -4,7 +4,7 @@ description: Prepares a person's own out-of-network therapy insurance claim or a
 license: Apache-2.0
 metadata:
   author: recoupr
-  version: "0.0.1"
+  version: "0.1.0"
   homepage: "https://recoupr.ai"
 ---
 # recoupr Out-of-Network Claims

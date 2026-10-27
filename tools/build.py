@@ -94,6 +94,63 @@ def validate_source_text(path, text, source_root):
             )
 
 
+def parse_source_skill(text):
+    lines = text.splitlines(keepends=True)
+    if not lines or lines[0].rstrip("\r\n") != "---":
+        raise BuildError("src/skill.md: frontmatter does not start with delimiter")
+    end = None
+    for index, line in enumerate(lines[1:], start=1):
+        if line.rstrip("\r\n") == "---":
+            end = index
+            break
+    if end is None:
+        raise BuildError("src/skill.md: frontmatter does not end with delimiter")
+
+    name = None
+    version = None
+    section = None
+    for line_number, raw_line in enumerate(lines[1:end], start=2):
+        line = raw_line.rstrip("\r\n")
+        if not line.strip() or line.lstrip().startswith("#"):
+            continue
+        if line.startswith("  "):
+            if section != "metadata":
+                raise BuildError(
+                    f"src/skill.md:{line_number}: unexpected frontmatter indentation"
+                )
+            key, separator, value = line.strip().partition(":")
+            if not separator or not value.strip():
+                raise BuildError(
+                    f"src/skill.md:{line_number}: invalid metadata field"
+                )
+            if key == "version":
+                version = value.strip().strip("\"'")
+            continue
+        key, separator, value = line.partition(":")
+        if not separator or not key or key.strip() != key:
+            raise BuildError(
+                f"src/skill.md:{line_number}: invalid frontmatter field"
+            )
+        if key == "name":
+            name = value.strip().strip("\"'")
+            section = None
+        elif key == "metadata" and not value.strip():
+            section = "metadata"
+        else:
+            section = None
+
+    if name != SKILL_NAME:
+        raise BuildError(f"src/skill.md: name must be {SKILL_NAME}")
+    if version is None:
+        raise BuildError("src/skill.md: metadata.version is missing")
+    if not re.fullmatch(r"[0-9]+\.[0-9]+\.[0-9]+", version):
+        raise BuildError("src/skill.md: metadata.version is not a version number")
+    body = "".join(lines[end + 1 :])
+    if not body.strip():
+        raise BuildError("src/skill.md: body is empty")
+    return body, version
+
+
 def load_sources(root):
     source_root = root / "src"
     if not source_root.is_dir():
@@ -110,7 +167,7 @@ def load_sources(root):
     skill_path = source_root / "skill.md"
     if skill_path not in text_by_path:
         raise BuildError("src/skill.md: file is missing")
-    body = text_by_path[skill_path]
+    body, version = parse_source_skill(text_by_path[skill_path])
     routine_names = parse_routine_menu(body)
     routine_dir = source_root / "routines"
     routine_files = {
@@ -161,10 +218,17 @@ def load_sources(root):
         path.relative_to(templates_dir).as_posix(): text_by_path[path].encode("utf-8")
         for path in template_files
     }
-    return body.encode("utf-8"), routine_names, routines, references, templates
+    return (
+        body.encode("utf-8"),
+        version,
+        routine_names,
+        routines,
+        references,
+        templates,
+    )
 
 
-def render_skill_markdown(body, routine_names):
+def render_skill_markdown(body, routine_names, version):
     frontmatter = (
         "---\n"
         f"name: {SKILL_NAME}\n"
@@ -172,7 +236,7 @@ def render_skill_markdown(body, routine_names):
         "license: Apache-2.0\n"
         "metadata:\n"
         "  author: recoupr\n"
-        '  version: "0.0.1"\n'
+        f'  version: "{version}"\n'
         '  homepage: "https://recoupr.ai"\n'
         "---\n"
     ).encode("utf-8")
@@ -489,8 +553,10 @@ def write_handouts(handout_dir, handouts):
 
 
 def build(root, dist_dir):
-    body, routine_names, routines, references, templates = load_sources(root)
-    skill_markdown = render_skill_markdown(body, routine_names)
+    body, version, routine_names, routines, references, templates = load_sources(
+        root
+    )
+    skill_markdown = render_skill_markdown(body, routine_names, version)
     paste_prompt = render_paste_prompt(body, routine_names, routines, references)
     printable = render_print_html(paste_prompt)
     handouts = render_handouts(root)
