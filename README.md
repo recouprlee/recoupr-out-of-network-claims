@@ -4,6 +4,6 @@ A free skill for the AI assistant you already use. It reads your therapist's sup
 
 Skill folder and name field: `recoupr-out-of-network-claims`.
 
-Status: under construction. Nothing here is released yet.
+Status: W0 repository and renderer. Routine content is pending.
 
 recoupr.ai

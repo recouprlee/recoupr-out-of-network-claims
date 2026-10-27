@@ -1,0 +1,24 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "recoupr-skills",
+  "description": "Skills published by recoupr.",
+  "owner": {
+    "name": "recoupr"
+  },
+  "plugins": [
+    {
+      "name": "recoupr-out-of-network-claims",
+      "version": "0.0.1",
+      "description": "Prepares a person's own out-of-network therapy claim or appeal from provided documents. The person reviews and submits every item.",
+      "author": {
+        "name": "recoupr",
+        "url": "https://recoupr.ai"
+      },
+      "homepage": "https://recoupr.ai",
+      "repository": "https://github.com/recouprlee/recoupr-out-of-network-claims",
+      "license": "Apache-2.0",
+      "category": "productivity",
+      "source": "./"
+    }
+  ]
+}
