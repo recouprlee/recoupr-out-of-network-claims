@@ -2,6 +2,7 @@
 """Build deterministic renderings of the skill from src/."""
 
 import argparse
+import csv
 import html
 import re
 import shutil
@@ -23,6 +24,22 @@ ATLAS_POINTER = (
     "the filing sheet at https://recoupr.ai/insurers/ for that insurer."
 )
 PASTE_REFERENCES = ("codes.md", "eob-codes.md", "appeals.md", "sources.md")
+HANDOUT_COUNT = 12
+HANDOUT_COLUMNS = (
+    "insurer",
+    "states",
+    "member_form_name",
+    "member_form_number",
+    "member_form_url",
+    "portal_upload",
+    "portal_name",
+    "portal_path",
+    "mail_address",
+    "member_deadline",
+    "source_url",
+    "verified_on",
+)
+HANDOUT_TOKEN_RE = re.compile(r"\{\{([a-z_]+)\}\}")
 FIXED_ZIP_TIME = (1980, 1, 1, 0, 0, 0)
 MENU_ITEM_RE = re.compile(
     r'^- \*\*([a-z0-9]+(?:-[a-z0-9]+)*)\*\*: Say ".+"$', re.MULTILINE
@@ -136,7 +153,15 @@ def load_sources(root):
         path.relative_to(references_dir).as_posix(): text_by_path[path].encode("utf-8")
         for path in reference_files
     }
-    return body.encode("utf-8"), routine_names, routines, references
+    templates_dir = source_root / "templates"
+    template_files = sorted(
+        path for path in templates_dir.rglob("*") if path.is_file()
+    )
+    templates = {
+        path.relative_to(templates_dir).as_posix(): text_by_path[path].encode("utf-8")
+        for path in template_files
+    }
+    return body.encode("utf-8"), routine_names, routines, references, templates
 
 
 def render_skill_markdown(body, routine_names):
@@ -362,7 +387,14 @@ def reset_directory(path, root):
     path.mkdir(parents=True)
 
 
-def write_skill_folder(skill_dir, skill_markdown, routine_names, routines, references):
+def write_skill_folder(
+    skill_dir,
+    skill_markdown,
+    routine_names,
+    routines,
+    references,
+    templates,
+):
     (skill_dir / "references" / "routines").mkdir(parents=True, exist_ok=True)
     (skill_dir / "SKILL.md").write_bytes(skill_markdown)
     for name in routine_names:
@@ -373,6 +405,10 @@ def write_skill_folder(skill_dir, skill_markdown, routine_names, routines, refer
         target = skill_dir / "references" / filename
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_bytes(references[filename])
+    for filename in sorted(templates):
+        target = skill_dir / "templates" / filename
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_bytes(templates[filename])
 
 
 def add_zip_entry(archive, name, data=None):
@@ -401,16 +437,73 @@ def write_deterministic_zip(skill_dir, zip_path):
             add_zip_entry(archive, relative, path.read_bytes())
 
 
+def slug(value):
+    return re.sub(r"[^a-z0-9]+", "-", value.lower()).strip("-")
+
+
+def render_handouts(root):
+    source_root = root / "src"
+    template_path = source_root / "templates" / "handout.md"
+    template = read_utf8(template_path)
+    validate_source_text(template_path, template, source_root)
+    tokens = set(HANDOUT_TOKEN_RE.findall(template))
+    unknown = sorted(tokens - set(HANDOUT_COLUMNS))
+    if unknown:
+        raise BuildError(f"{template_path}: unknown handout token {unknown[0]}")
+    missing = sorted(set(HANDOUT_COLUMNS) - tokens)
+    if missing:
+        raise BuildError(f"{template_path}: missing handout token {missing[0]}")
+
+    atlas_path = source_root / "references" / "payer-atlas.csv"
+    try:
+        with atlas_path.open(newline="", encoding="utf-8") as handle:
+            rows = list(csv.DictReader(handle))
+    except OSError as error:
+        raise BuildError(f"{atlas_path}: {error}") from error
+    if len(rows) < HANDOUT_COUNT:
+        raise BuildError(f"{atlas_path}: fewer than {HANDOUT_COUNT} insurer rows")
+
+    rendered = {}
+    for line_number, row in enumerate(rows[:HANDOUT_COUNT], start=2):
+        for column in HANDOUT_COLUMNS:
+            if not row.get(column, "").strip():
+                raise BuildError(f"{atlas_path}:{line_number}: {column} is empty")
+        body = HANDOUT_TOKEN_RE.sub(lambda match: row[match.group(1)], template)
+        if HANDOUT_TOKEN_RE.search(body):
+            raise BuildError(f"{template_path}: unresolved handout token")
+        if len(body.splitlines()) > 55:
+            raise BuildError(f"{row['insurer']}: handout exceeds 55 lines")
+        if len(body) > 4000:
+            raise BuildError(f"{row['insurer']}: handout exceeds 4000 characters")
+        filename = f"{slug(row['insurer'])}.md"
+        if filename in rendered:
+            raise BuildError(f"{atlas_path}:{line_number}: duplicate handout slug")
+        rendered[filename] = body.encode("utf-8")
+    return rendered
+
+
+def write_handouts(handout_dir, handouts):
+    handout_dir.mkdir(parents=True)
+    for filename, content in sorted(handouts.items()):
+        (handout_dir / filename).write_bytes(content)
+
+
 def build(root, dist_dir):
-    body, routine_names, routines, references = load_sources(root)
+    body, routine_names, routines, references, templates = load_sources(root)
     skill_markdown = render_skill_markdown(body, routine_names)
     paste_prompt = render_paste_prompt(body, routine_names, routines, references)
     printable = render_print_html(paste_prompt)
+    handouts = render_handouts(root)
 
     reset_directory(dist_dir, root)
     skill_dir = dist_dir / SKILL_NAME
     write_skill_folder(
-        skill_dir, skill_markdown, routine_names, routines, references
+        skill_dir,
+        skill_markdown,
+        routine_names,
+        routines,
+        references,
+        templates,
     )
     write_deterministic_zip(skill_dir, dist_dir / f"{SKILL_NAME}.zip")
     validator_skill_dir = skill_dir / "skills" / SKILL_NAME
@@ -420,10 +513,12 @@ def build(root, dist_dir):
         routine_names,
         routines,
         references,
+        templates,
     )
     (dist_dir / "paste-in-prompt.md").write_bytes(paste_prompt)
     (dist_dir / "print").mkdir(parents=True)
     (dist_dir / "print" / "index.html").write_bytes(printable)
+    write_handouts(dist_dir / "handouts", handouts)
 
     plugin_skill_dir = root / "skills" / SKILL_NAME
     reset_directory(plugin_skill_dir, root)
@@ -433,6 +528,7 @@ def build(root, dist_dir):
         routine_names,
         routines,
         references,
+        templates,
     )
     return dist_dir
 
@@ -458,7 +554,9 @@ def main(argv=None):
     except (BuildError, OSError, zipfile.BadZipFile) as error:
         print(f"build failed: {error}", file=sys.stderr)
         return 1
-    print(f"Built skill folder, ZIP, paste-in prompt and printable page in {output}")
+    print(
+        f"Built skill folder, ZIP, paste-in prompt, printable page and handouts in {output}"
+    )
     print(f"Mirrored plugin skill in {arguments.root / 'skills' / SKILL_NAME}")
     return 0
 

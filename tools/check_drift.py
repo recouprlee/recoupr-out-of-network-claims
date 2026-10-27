@@ -120,12 +120,13 @@ def check_print_paragraphs(printable, source_markdown, label):
 
 
 def check(root, dist_dir):
-    body, routine_names, routines, references = build.load_sources(root)
+    body, routine_names, routines, references, templates = build.load_sources(root)
     expected_skill = build.render_skill_markdown(body, routine_names)
     expected_paste = build.render_paste_prompt(
         body, routine_names, routines, references
     )
     expected_print = build.render_print_html(expected_paste)
+    expected_handouts = build.render_handouts(root)
 
     skill_dir = dist_dir / build.SKILL_NAME
     skill_path = skill_dir / "SKILL.md"
@@ -155,6 +156,8 @@ def check(root, dist_dir):
         expected_files[relative] = routines[name]
     for filename, content in references.items():
         expected_files[f"references/{filename}"] = content
+    for filename, content in templates.items():
+        expected_files[f"templates/{filename}"] = content
     for relative, expected in expected_files.items():
         actual = read_required(skill_dir / relative, f"{build.SKILL_NAME}/{relative}")
         require_equal(actual, expected, f"{build.SKILL_NAME}/{relative}")
@@ -208,6 +211,22 @@ def check(root, dist_dir):
             references[filename].decode("utf-8"),
             f"src/references/{filename}",
         )
+
+    handout_dir = dist_dir / "handouts"
+    try:
+        actual_names = {
+            path.name for path in handout_dir.iterdir() if path.is_file()
+        }
+    except OSError as error:
+        raise DriftError(f"handouts: {error}") from error
+    if actual_names != set(expected_handouts):
+        missing = sorted(set(expected_handouts) - actual_names)
+        extra = sorted(actual_names - set(expected_handouts))
+        detail = f"missing {missing[0]}" if missing else f"unexpected {extra[0]}"
+        raise DriftError(f"handouts: {detail}")
+    for filename, expected in sorted(expected_handouts.items()):
+        actual = read_required(handout_dir / filename, f"handouts/{filename}")
+        require_equal(actual, expected, f"handouts/{filename}")
 
 
 def parse_args(argv=None):
