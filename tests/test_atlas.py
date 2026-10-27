@@ -7,6 +7,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 ATLAS = ROOT / "src" / "references" / "payer-atlas.csv"
+ADDRESSES = ROOT / "src" / "references" / "addresses.csv"
 FORMS = ROOT / "src" / "references" / "forms"
 HEADER = [
     "insurer",
@@ -165,6 +166,26 @@ class AtlasTests(unittest.TestCase):
 
     def test_header_is_exact(self):
         self.assertEqual(HEADER, self.header)
+
+    def test_address_research_matches_atlas(self):
+        with ADDRESSES.open(newline="", encoding="utf-8") as handle:
+            address_rows = list(csv.DictReader(handle))
+
+        self.assertEqual(
+            [row["insurer"] for row in self.rows],
+            [row["insurer"] for row in address_rows],
+        )
+        for line_number, row in enumerate(address_rows, start=2):
+            self.assertTrue(
+                row["source_url"].startswith("https://"),
+                f"line {line_number}: source_url must start with https://",
+            )
+            date.fromisoformat(row["read_date"])
+        for line_number, row in enumerate(self.rows, start=2):
+            self.assertTrue(
+                row["mail_address"].strip(),
+                f"line {line_number}: mail_address is empty",
+            )
 
     def test_required_cells_are_not_empty(self):
         for line_number, row in enumerate(self.rows, start=2):
