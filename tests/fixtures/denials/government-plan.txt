@@ -1,0 +1,19 @@
+SENTINEL_DENIAL_CASE_45
+
+EOB block
+Client name: SENTINEL_CLIENT_NAME_45
+Member ID: SENTINEL_MEMBER_ID_45
+Claim number: SENTINEL_CLAIM_NUMBER_45
+Insurer: SENTINEL_GOVERNMENT_PROGRAM_45
+Plan type: government
+Date of service: 2026-05-01
+EOB notice date: 2026-05-20
+Adjustment code: CARC 204
+EOB reason: service not covered under the current benefit plan
+
+Letter block
+Denial notice date: 2026-05-20
+Date received: NOT PROVIDED
+Appeal deadline printed in letter: NOT PUBLISHED
+Letter reason: The program notice states that the service is not covered.
+Appeal rights paragraph: Follow the program-specific review instructions in this notice.
