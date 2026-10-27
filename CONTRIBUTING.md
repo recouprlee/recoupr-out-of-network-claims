@@ -5,7 +5,7 @@
 Add or fix insurer rows in `src/references/payer-atlas.csv`. Keep this column
 order:
 
-`insurer,state,payer_id,member_form_url,form_revision,portal_upload,mail_address,fax,attachments,member_deadline,portal_shows_outcome,notes,source_url,verified_on`
+`insurer,aliases,states,payer_kind,member_form_name,member_form_number,member_form_revision,member_form_url,form_fillable,portal_upload,portal_name,portal_path,file_types,confirmation,mail_address,fax,attachments,superbill_alone_accepted,cms1500_required,member_signature,provider_signature,payment_to_member,member_deadline,deadline_basis,status_check,processing_time,mh_route,provider_on_file_requirement,in_network_superbill_note,caveats,source_url,verified_on`
 
 Every row must have `source_url` and `verified_on`. Use a public source. Do not
 add personal data.

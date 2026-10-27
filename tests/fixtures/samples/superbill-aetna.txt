@@ -1,0 +1,52 @@
+SENTINEL_SAMPLE_SUPERBILL_3
+
+Claim target insurer: Aetna
+Plan type: PPO
+Plan state: TX
+Client name: SENTINEL_CLIENT_NAME_3
+Identity date on card: SENTINEL_BIRTH_DATE_3
+Member ID: SENTINEL_MEMBER_ID_3
+Group number: SENTINEL_GROUP_NUMBER_3
+Client address: SENTINEL_CLIENT_ADDRESS_3
+Client phone: SENTINEL_CLIENT_PHONE_3
+Client email: sentinel_client_email_3@example.invalid
+
+Practice name: Example Counseling
+Practice address: SENTINEL_PROVIDER_ADDRESS_3, Example Street, Example City, EX 00000
+Practice phone: SENTINEL_PROVIDER_PHONE_3
+Provider name: SENTINEL_PROVIDER_NAME_3
+Provider credentials: LCSW
+Provider license number: SENTINEL_PROVIDER_LICENSE_3
+Provider license state: EX
+NPI type: type 1
+NPI: SENTINEL_NPI_3_0000000000
+Tax ID type: company
+Tax ID: SENTINEL_TAX_ID_3_000000000
+
+Session 1
+Date of service: 2026-10-01
+CPT code: 90837
+Service description: outpatient psychotherapy
+Units: 1
+ICD-10 code: F99
+Diagnosis pointer: 1
+Charge: 150.00
+Amount paid: 150.00
+Place of service: 10
+Telehealth modifier: 95
+
+Session 2
+Date of service: 2026-10-08
+CPT code: 90837
+Service description: outpatient psychotherapy
+Units: 1
+ICD-10 code: F99
+Diagnosis pointer: 1
+Charge: 150.00
+Amount paid: 150.00
+Place of service: 10
+Telehealth modifier: 95
+
+Total charge: 300.00
+Total paid: 300.00
+Payment status: paid in full

@@ -1,0 +1,52 @@
+SENTINEL_SAMPLE_SUPERBILL_2
+
+Claim target insurer: UnitedHealthcare
+Plan type: PPO
+Plan state: TX
+Client name: SENTINEL_CLIENT_NAME_2
+Identity date on card: SENTINEL_BIRTH_DATE_2
+Member ID: SENTINEL_MEMBER_ID_2
+Group number: SENTINEL_GROUP_NUMBER_2
+Client address: SENTINEL_CLIENT_ADDRESS_2
+Client phone: SENTINEL_CLIENT_PHONE_2
+Client email: sentinel_client_email_2@example.invalid
+
+Practice name: Example Counseling
+Practice address: SENTINEL_PROVIDER_ADDRESS_2, Example Street, Example City, EX 00000
+Practice phone: SENTINEL_PROVIDER_PHONE_2
+Provider name: SENTINEL_PROVIDER_NAME_2
+Provider credentials: LCSW
+Provider license number: SENTINEL_PROVIDER_LICENSE_2
+Provider license state: EX
+NPI type: type 1
+NPI: SENTINEL_NPI_2_0000000000
+Tax ID type: company
+Tax ID: SENTINEL_TAX_ID_2_000000000
+
+Session 1
+Date of service: 2026-10-01
+CPT code: 90837
+Service description: outpatient psychotherapy
+Units: 1
+ICD-10 code: F99
+Diagnosis pointer: 1
+Charge: 150.00
+Amount paid: 150.00
+Place of service: 10
+Telehealth modifier: 95
+
+Session 2
+Date of service: 2026-10-08
+CPT code: 90837
+Service description: outpatient psychotherapy
+Units: 1
+ICD-10 code: F99
+Diagnosis pointer: 1
+Charge: 150.00
+Amount paid: 150.00
+Place of service: 10
+Telehealth modifier: 95
+
+Total charge: 300.00
+Total paid: 300.00
+Payment status: paid in full

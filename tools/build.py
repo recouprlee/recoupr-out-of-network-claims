@@ -109,7 +109,9 @@ def load_sources(root):
         raise BuildError(f"src/routines/{unlisted[0]}.md: routine is not in the menu")
 
     references_dir = source_root / "references"
-    reference_files = sorted(path for path in references_dir.iterdir() if path.is_file())
+    reference_files = sorted(
+        path for path in references_dir.rglob("*") if path.is_file()
+    )
     required_references = {
         "payer-atlas.csv",
         "codes.md",
@@ -117,7 +119,9 @@ def load_sources(root):
         "appeals.md",
         "sources.md",
     }
-    found_references = {path.name for path in reference_files}
+    found_references = {
+        path.name for path in reference_files if path.parent == references_dir
+    }
     missing_references = sorted(required_references - found_references)
     if missing_references:
         raise BuildError(
@@ -129,7 +133,8 @@ def load_sources(root):
         for name in routine_names
     }
     references = {
-        path.name: text_by_path[path].encode("utf-8") for path in reference_files
+        path.relative_to(references_dir).as_posix(): text_by_path[path].encode("utf-8")
+        for path in reference_files
     }
     return body.encode("utf-8"), routine_names, routines, references
 
@@ -365,7 +370,9 @@ def write_skill_folder(skill_dir, skill_markdown, routine_names, routines, refer
             routines[name]
         )
     for filename in sorted(references):
-        (skill_dir / "references" / filename).write_bytes(references[filename])
+        target = skill_dir / "references" / filename
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_bytes(references[filename])
 
 
 def add_zip_entry(archive, name, data=None):
