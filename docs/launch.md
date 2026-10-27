@@ -36,7 +36,7 @@ Each insurer row records its source URL and read date. Missing public details st
 
 1. Start at https://recoupr.ai/get-the-skill. The page puts the available doors in one place and explains what to download.
 2. Use the one-step install line: `/plugin install recoupr-out-of-network-claims --marketplace recouprlee/recoupr-out-of-network-claims`. VERIFY AT LAUNCH.
-3. Download the ZIP from the latest release. The `SKILL.md` inside it is only the menu; the routines and references sit beside it. An assistant that takes one file gets the paste-in prompt, which carries the routines and asks the person for their insurer page at recoupr.ai when a route is needed.
+3. Download the ZIP from the latest release. The `SKILL.md` inside it is only the menu; the routines and references sit beside it. An assistant that takes one file gets the paste-in prompt, which carries the routines and asks the person for their insurer page at https://recoupr.ai/insurers/ when a route is needed.
 4. Copy the paste-in prompt from the latest release. It is the text door for an assistant that accepts a pasted instruction.
 
 Whichever door a person chooses, the boundary is the same. The skill prepares. The person checks. The person submits. Nobody is charged for the skill.
