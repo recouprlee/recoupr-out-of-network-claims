@@ -25,7 +25,7 @@ Read date: 2026-10-09
 - Portal upload: YES
 - Portal: Blue Access for Members (BAM)
 - Portal path: BAM Message Center > Create a new message > attach form and original provider bill > subject Claims Submission Attachments > Send
-- Mail address: NOT PUBLISHED
+- Mail address: Blue Cross and Blue Shield of Texas, P.O. Box 660044, Dallas, Texas 75266-0044
 - Fax: NOT PUBLISHED
 - Attach: provider or organization name; patient name; date each service or supply was provided; description of each service or supply; diagnosis code; charge for each service or supply
 - File types: NOT PUBLISHED; login pop-up is UNREADABLE
@@ -62,7 +62,7 @@ Read date: 2026-10-09
 - Portal upload: YES
 - Portal: UnitedHealthcare member account
 - Portal path: Claims & Accounts > Submit a claim
-- Mail address: NOT PUBLISHED
+- Mail address: PLAN-DEPENDENT: Mail it to the address listed on the back of your Health Plan ID Card. | MH: Claims processing, PO Box 30755, Salt Lake City, UT 84130-0755
 - Fax: NOT PUBLISHED
 - Attach: patient name; provider taxpayer identification number; diagnosis codes; CPT or HCPC procedure codes with modifiers; units; billed amount for each procedure code; place of service code; receipts; primary carrier EOB when applicable
 - File types: NOT PUBLISHED; signed-in form is UNREADABLE
@@ -99,7 +99,7 @@ Read date: 2026-10-09
 - Portal upload: YES
 - Portal: Aetna member website
 - Portal path: Claims > Submit a Claim for plans exposing the online route; alternate published employer path: Support > Contact Us > Send Message > attach claim form
-- Mail address: NOT PUBLISHED
+- Mail address: PLAN-DEPENDENT: Refer to the back of your ID card for claim mailing address.
 - Fax: NOT PUBLISHED
 - Attach: itemized bill: patient name; condition being treated; type of services rendered; dates of service; relationship to employee; receipts as proof of payment. Provider-completed alternative also captures place of service, procedure code, description, charges, units, diagnosis code, provider name and address, taxpayer ID, NPI
 - File types: NOT PUBLISHED; signed-in form is UNREADABLE
@@ -136,7 +136,7 @@ Read date: 2026-10-09
 - Portal upload: NOT PUBLISHED
 - Portal: myCigna
 - Portal path: Generic page: Claims and Accounts > Submit a Claim Online; exact behavioral upload path NOT PUBLISHED and signed-in page UNREADABLE
-- Mail address: NOT PUBLISHED
+- Mail address: PLAN-DEPENDENT: Send your completed claim form and itemized bills to the Cigna address listed on your ID card. | MH: PLAN-DEPENDENT: HMO or POS: Cigna Behavioral Health, Inc., Attn: Claims Service Dept., P.O. Box 188022, Chattanooga, TN 37422; Open Access Plus: the Cigna address listed on your identification card.
 - Fax: NOT PUBLISHED
 - Attach: employee name; patient name; provider name and credentials; provider address; provider tax ID; date of service; ICD-10 diagnosis code; type of service or procedure code; charge for service; primary carrier EOB when applicable
 - File types: NOT PUBLISHED
@@ -173,8 +173,8 @@ Read date: 2026-10-09
 - Portal upload: YES
 - Portal: UMR member account and UMR app
 - Portal path: Member account: Claims > Submit a claim > Submit an online claim; UMR app also accepts claim submission
-- Mail address: NOT PUBLISHED
-- Fax: NOT PUBLISHED
+- Mail address: UMR, P.O. Box 30541, Salt Lake City, UT 84130-0541
+- Fax: 855-444-2896
 - Attach: patient name; date of service; service description; diagnosis or type of illness or injury; charge for each service; provider name; provider address; provider tax ID; member number on attachments
 - File types: NOT PUBLISHED
 - File size limit: NOT PUBLISHED
@@ -210,7 +210,7 @@ Read date: 2026-10-09
 - Portal upload: YES
 - Portal: MyBSWHealth member portal
 - Portal path: Member portal > secure message to Customer Service with the form attached; exact signed-in menu label is NOT PUBLISHED and UNREADABLE
-- Mail address: NOT PUBLISHED
+- Mail address: Baylor Scott & White Health Plan, Attn: Pay Me, 1206 West Campus Drive, Temple, TX 76502
 - Fax: NOT PUBLISHED
 - Attach: member receiving service; subscriber name; member number; date of service; charge for each service or line; amount paid; CPT code or service description; diagnosis code or description; medication and amount if applicable; provider name; provider address; NPI; tax ID; proof of payment
 - File types: NOT PUBLISHED
@@ -247,8 +247,8 @@ Read date: 2026-10-09
 - Portal upload: NO
 - Portal: TRICARE West Region Beneficiary Portal, status only
 - Portal path: Domestic West claims have no upload path; the official medical-claims page publishes nonportal submission and reserves online filing for overseas claims
-- Mail address: NOT PUBLISHED
-- Fax: NOT PUBLISHED
+- Mail address: TRICARE West Region Claims, P.O. Box 202160, Florence, SC 29502-2160
+- Fax: 877-989-0070
 - Attach: sponsor DoD ID or DBN; provider name and address; date and place of each service; description of each service or supply; charge for each service; diagnosis; other-insurance EOB when applicable; proof of payment for overseas claims
 - File types: NOT APPLICABLE
 - File size limit: NOT APPLICABLE
@@ -288,8 +288,8 @@ Read date: 2026-10-09
 - Portal upload: YES
 - Portal: Meritain Health member website
 - Portal path: Top menu > Submit a Claim > choose patient > Claim type General Medicine > Select > complete mandatory fields > Submit
-- Mail address: NOT PUBLISHED
-- Fax: NOT PUBLISHED
+- Mail address: Meritain Health, P.O. Box 853921, Richardson, TX 75085-3921
+- Fax: 1.763.852.5057
 - Attach: detailed invoice with procedure code, diagnosis code, provider tax ID, provider name and address, date and place of service, service description, charge, and receipt when member reimbursement is requested
 - File types: PDF is accepted; encrypted PDF and password-protected documents are barred; other types NOT PUBLISHED
 - File size limit: NOT PUBLISHED
@@ -323,7 +323,7 @@ Read date: 2026-10-09
 - Portal upload: NOT PUBLISHED
 - Portal: Issuing home Blue Plan member portal; no universal BlueCard member portal
 - Portal path: Use the three-character ID prefix to identify the issuing home Plan; exact member claim upload path is plan specific and NOT PUBLISHED for BlueCard
-- Mail address: NOT PUBLISHED
+- Mail address: PLAN-DEPENDENT: Use the first three letters of the Identification Number from your member ID card to find your local Blue Cross and Blue Shield company.
 - Fax: NOT PUBLISHED
 - Attach: NOT PUBLISHED: the host-plan BlueCard pages describe provider claim routing, not a universal member packet
 - File types: NOT PUBLISHED
@@ -359,8 +359,8 @@ Read date: 2026-10-09
 - Portal upload: YES
 - Portal: MyGEHA member portal and MyGEHA app
 - Portal path: MyGEHA > Claims and EOBs > Submit a claim > Get started; the current PDF also states Claims > Submit a claim > Submit an online claim
-- Mail address: NOT PUBLISHED
-- Fax: NOT PUBLISHED
+- Mail address: G.E.H.A, P.O. Box 21172, Eagan, MN 55121
+- Fax: 1-866-953-7594
 - Attach: patient name; date and place of service; CPT code or service description and days or units; diagnosis or type of illness or injury; charge for each service; provider name, address, and tax ID; total charge, amount paid, and balance due; member ID on attachments
 - File types: NOT PUBLISHED for portal or app attachments
 - File size limit: NOT PUBLISHED
@@ -396,8 +396,8 @@ Read date: 2026-10-09
 - Portal upload: YES
 - Portal: Oscar online account or app secure message
 - Portal path: Oscar account or app > message the Care Team > secure message with the Member Claim Form and itemized bill; exact signed-in attachment controls are UNREADABLE
-- Mail address: NOT PUBLISHED
-- Fax: NOT PUBLISHED
+- Mail address: Oscar, P.O. Box 52146, Phoenix, AZ 85072-2146
+- Fax: (888) 977-2062
 - Attach: provider name and address; patient name; service provided; date of service; amount charged for each service; diagnosis code in ICD format; procedure codes; tax ID
 - File types: PDF form and itemized-bill attachment are accepted; complete type list NOT PUBLISHED
 - File size limit: NOT PUBLISHED
@@ -432,7 +432,7 @@ Read date: 2026-10-09
 - Portal upload: NO
 - Portal: Ambetter Online Member Account, status only
 - Portal path: No claim upload path is published. The 2026 EPO and HMO notices direct the reimbursement form and detailed bill to a nonportal route
-- Mail address: NOT PUBLISHED
+- Mail address: Ambetter from Superior HealthPlan, Claims Department-Member Reimbursement, P.O. Box 5010, Farmington, MO 63640-5010
 - Fax: NOT PUBLISHED
 - Attach: completed signed reimbursement form; proof of services; itemized proof of payment; itemized list of services; subscriber and patient identifiers; provider name, address, NPI, tax ID, telephone, organization or group information; treatment setting; illness or injury explanation; diagnosis code and description; date of service; procedure code and description; amount paid
 - File types: NOT APPLICABLE
@@ -467,7 +467,7 @@ Read date: 2026-10-09
 - Portal upload: NO
 - Portal: FloridaBlue.com member account
 - Portal path: NOT APPLICABLE: public claim form directs mail submission only
-- Mail address: NOT PUBLISHED
+- Mail address: Florida Blue, P.O. Box 1798, Jacksonville, FL 32231-0014
 - Fax: NOT PUBLISHED
 - Attach: Physician or supplier name; physician or supplier address; Tax ID; NPI; member name; patient's full name if different; type of service; procedure code; date of service or purchase; diagnosis; diagnosis code; condition being treated; charge for each service
 - File types: NOT APPLICABLE
@@ -502,7 +502,7 @@ Read date: 2026-10-09
 - Portal upload: NO
 - Portal: Humana Military beneficiary self-service
 - Portal path: NOT APPLICABLE: domestic East Region member claims are submitted offline; online claim submission is published only for overseas claims
-- Mail address: NOT PUBLISHED
+- Mail address: TRICARE East Region Claims, P.O. Box 202146, Florence, SC 29502-2146
 - Fax: NOT PUBLISHED
 - Attach: Sponsor DOD ID number or DBN; provider name; provider address; NPI if available; date of each service; place of each service; description of each service or supply; charge for each service; diagnosis; procedure codes; proof of payment if paid; other health insurance EOB when applicable
 - File types: NOT APPLICABLE
@@ -540,7 +540,7 @@ Read date: 2026-10-09
 - Portal upload: NO
 - Portal: Anthem member account and Sydney Health app
 - Portal path: NOT APPLICABLE: public claim form directs mail submission only
-- Mail address: NOT PUBLISHED
+- Mail address: Anthem Blue Cross and Blue Shield, P.O. Box 105187, Atlanta, GA 30348-5187
 - Fax: NOT PUBLISHED
 - Attach: Provider name; provider address; patient name; service provided; date of service; amount charged for each service; diagnosis code; procedure code; Tax ID
 - File types: NOT APPLICABLE
@@ -575,7 +575,7 @@ Read date: 2026-10-09
 - Portal upload: YES
 - Portal: My Health Plan
 - Portal path: Log in to My Health Plan; the public form does not publish the exact claim-upload menu path
-- Mail address: NOT PUBLISHED
+- Mail address: Medical Mutual, P.O. Box 6018, Cleveland, OH 44101-1018
 - Fax: NOT PUBLISHED
 - Attach: Diagnosis; procedure; date of service; charge; provider or facility name; provider or facility address; provider Federal Tax ID; treating provider service NPI; billing NPI
 - File types: NOT PUBLISHED
@@ -610,7 +610,7 @@ Read date: 2026-10-09
 - Portal upload: NO
 - Portal: Anthem member account and Sydney Health app
 - Portal path: NOT APPLICABLE: public claim form directs mail submission only
-- Mail address: NOT PUBLISHED
+- Mail address: Anthem Blue Cross, P.O. Box 60007, Los Angeles, CA 90060-0007
 - Fax: NOT PUBLISHED
 - Attach: Provider name; provider address; patient name; service provided; date of service; amount charged for each service; diagnosis code; procedure code; Tax ID
 - File types: NOT APPLICABLE
@@ -646,7 +646,7 @@ Read date: 2026-10-09
 - Portal upload: NO
 - Portal: Blue Shield online account and mobile app
 - Portal path: NOT APPLICABLE: the public claim form and QHP claim policy direct offline submission only
-- Mail address: NOT PUBLISHED
+- Mail address: Blue Shield of California, P.O. Box 272540, Chico, CA 95927-2540
 - Fax: NOT PUBLISHED
 - Attach: NOT PUBLISHED: current claim form and QHP page require an itemized bill but do not enumerate its service-line fields
 - File types: NOT APPLICABLE
@@ -682,7 +682,7 @@ Read date: 2026-10-09
 - Portal upload: YES
 - Portal: Anthem online account
 - Portal path: Log in > Submit & Track Claims > submit out-of-network claims online
-- Mail address: NOT PUBLISHED
+- Mail address: Anthem Blue Cross and Blue Shield, P.O. Box 1407, Church Street Station, New York, New York 10008-1407
 - Fax: NOT PUBLISHED
 - Attach: Provider name; provider address; provider Tax ID; patient name; service provided; date of service; place of service; amount charged for each service; diagnosis code; procedure code
 - File types: NOT PUBLISHED
@@ -718,7 +718,7 @@ Read date: 2026-10-09
 - Portal upload: NO
 - Portal: myuhc.com and UnitedHealthcare app
 - Portal path: NOT APPLICABLE: Oxford form directs the completed claim and attachments to an offline route
-- Mail address: NOT PUBLISHED
+- Mail address: PLAN-DEPENDENT: Mail it to the address listed on the back of your health plan ID card.
 - Fax: NOT PUBLISHED
 - Attach: Patient name; dates of service; ICD-10 diagnosis codes; CPT or HCPC procedure codes with modifiers; units; billed amount for each procedure; place of service; provider name; provider address; service address; NPI; Tax ID; group or facility name
 - File types: NOT APPLICABLE
@@ -754,7 +754,7 @@ Read date: 2026-10-09
 - Portal upload: NO
 - Portal: myuhc.com and UnitedHealthcare app
 - Portal path: NOT APPLICABLE: Oxford New York form directs the completed claim and attachments to an offline route
-- Mail address: NOT PUBLISHED
+- Mail address: PLAN-DEPENDENT: Mail it to the address listed on the back of your health plan ID card.
 - Fax: NOT PUBLISHED
 - Attach: Patient name; dates of service; ICD-10 diagnosis codes; CPT or HCPC procedure codes with modifiers; units; billed amount for each procedure; place of service; provider name; provider address; service address; NPI; Tax ID; group or facility name
 - File types: NOT APPLICABLE
@@ -790,7 +790,7 @@ Read date: 2026-10-09
 - Portal upload: YES
 - Portal: Carelon Behavioral Health MemberConnect
 - Portal path: Open the MemberConnect portal linked by the Empire Plan certificate; exact post-login claim-submission menu is UNREADABLE
-- Mail address: NOT PUBLISHED
+- Mail address: Carelon Behavioral Health, P.O. Box 1850, Hicksville, NY 11802
 - Fax: NOT PUBLISHED
 - Attach: Insured ID; member and insured identity; other coverage; employment or accident indicators; member information-release signature; conditional assignment; referring provider NPI; ICD-CM diagnosis; service dates; place of service; CPT or HCPCS; diagnosis pointer; charges; units; rendering provider ID or NPI when applicable; Federal Tax ID; total charge; amount paid; rendering provider signature and credentials; service facility address; billing provider name, address, ZIP, phone, and NPI
 - File types: NOT PUBLISHED
@@ -826,7 +826,7 @@ Read date: 2026-10-09
 - Portal upload: YES
 - Portal: Horizon member account and Horizon Blue app
 - Portal path: Select Claims, then Submit a Claim
-- Mail address: NOT PUBLISHED
+- Mail address: Horizon Blue Cross Blue Shield of New Jersey, P.O. Box 1609, Newark, New Jersey 07101-1609
 - Fax: NOT PUBLISHED
 - Attach: Provider or institution name and address; Federal Tax Identification Number; NPI; patient full name; type of service or item; each service date; amount charged for each service; diagnosis
 - File types: NOT PUBLISHED
@@ -862,7 +862,7 @@ Read date: 2026-10-09
 - Portal upload: YES
 - Portal: AmeriHealth online member account
 - Portal path: Log in and submit an out-of-network claim when the benefit plan enables that feature; exact post-login menu is UNREADABLE
-- Mail address: NOT PUBLISHED
+- Mail address: PLAN-DEPENDENT: Individual Health Coverage claim forms go to AmeriHealth Insurance Company, P.O. Box 211184, Eagan, MN 55121; group plans use their specific plan instructions.
 - Fax: NOT PUBLISHED
 - Attach: Provider name, address, and telephone number on official bill head; patient full name; description of each service or item; date and amount charged for each service or item; diagnosis
 - File types: NOT PUBLISHED
@@ -898,7 +898,7 @@ Read date: 2026-10-09
 - Portal upload: NO
 - Portal: BlueAccess member account and BCBSTN app for status only
 - Portal path: NOT APPLICABLE: the public member claim form publishes only an offline submission route
-- Mail address: NOT PUBLISHED
+- Mail address: BlueCross BlueShield of Tennessee, Claims Service Center, 1 Cameron Hill Circle, Suite 0002, Chattanooga, Tennessee 37402-0002
 - Fax: NOT PUBLISHED
 - Attach: Provider name and address; patient name; date of care; procedure code for each service; charge for each service; diagnosis code or description; provider Tax ID; NPI; specialty; phone; place of care
 - File types: NOT APPLICABLE
@@ -933,7 +933,7 @@ Read date: 2026-10-09
 - Portal upload: YES
 - Portal: Here4TN and Live and Work Well
 - Portal path: Here4TN Member Benefits > Access important forms > out-of-network claims > get more information and submit your out-of-network claim
-- Mail address: NOT PUBLISHED
+- Mail address: Claims processing, PO Box 30755, Salt Lake City, UT 84130-0755
 - Fax: NOT PUBLISHED
 - Attach: NOT PUBLISHED: login-gated form fields and attachment instructions are UNREADABLE
 - File types: UNREADABLE
@@ -969,7 +969,7 @@ Read date: 2026-10-09
 - Portal upload: YES
 - Portal: Anthem member account
 - Portal path: Log in > Submit & Track Claims > submit out-of-network claims online
-- Mail address: NOT PUBLISHED
+- Mail address: Anthem Blue Cross and Blue Shield, P.O. Box 105187, Atlanta, GA 30348-5187
 - Fax: NOT PUBLISHED
 - Attach: Provider name and address; patient name; service provided; date of service; amount charged for each service; diagnosis code; procedure code; Tax ID
 - File types: NOT PUBLISHED
@@ -1006,7 +1006,7 @@ Read date: 2026-10-09
 - Portal upload: NO
 - Portal: myConnectiCare for claim status only
 - Portal path: NOT APPLICABLE: Out-of-Plan Reimbursement Form F005 publishes only an offline submission route
-- Mail address: NOT PUBLISHED
+- Mail address: ConnectiCare Claims Department, P.O. Box 546, Farmington, CT 06034-0546 | MH: OptumHealth Behavioral Solutions, P.O. Box 30757, Salt Lake City, UT 84130-0757
 - Fax: NOT PUBLISHED
 - Attach: Date of service; diagnosis or cause and nature of illness; procedure code or procedure description; place of service; charges; payments made; provider full name; provider address; provider phone; provider Tax ID and/or NPI
 - File types: NOT APPLICABLE
@@ -1042,7 +1042,7 @@ Read date: 2026-10-09
 - Portal upload: YES
 - Portal: Anthem member account
 - Portal path: Log in > Submit & Track Claims > submit out-of-network claims online
-- Mail address: NOT PUBLISHED
+- Mail address: Anthem Blue Cross and Blue Shield, P.O. Box 105187, Atlanta, GA 30348-5187
 - Fax: NOT PUBLISHED
 - Attach: Provider name and address; patient name; service provided; date of service; amount charged for each service; diagnosis code; procedure code; Tax ID
 - File types: NOT PUBLISHED
@@ -1079,7 +1079,7 @@ Read date: 2026-10-09
 - Portal upload: YES
 - Portal: CareFirst My Account
 - Portal path: Log in > Claims > Submit a Claim Online > enter requested claim information and upload required documents
-- Mail address: NOT PUBLISHED
+- Mail address: CAREFIRST BLUECROSS BLUESHIELD MAIL ADMINISTRATOR, P.O. BOX 14116, LEXINGTON, KY 40512-4116
 - Fax: NOT PUBLISHED
 - Attach: Provider letterhead with person or organization name and address; patient name; date for each service; charge for each service; service description; provider Tax ID or NPI; physician or pharmacist signature; for psychotherapy, session length, session type, provider professional status, and professional license number when provider is not a medical doctor
 - File types: .bmp; .jpg; .pdf; .png; .tiff
@@ -1115,7 +1115,7 @@ Read date: 2026-10-09
 - Portal upload: YES
 - Portal: MyBlue
 - Portal path: For FEP Blue Standard, select the public online domestic-claim option and sign in to MyBlue; exact post-login path is UNREADABLE
-- Mail address: NOT PUBLISHED
+- Mail address: PLAN-DEPENDENT: Submit to your local Blue Cross and/or Blue Shield Plan; locate the mailing address at www.fepblue.org/contact.
 - Fax: NOT PUBLISHED
 - Attach: Provider name and address; full patient name; date and type of service or supply; charge for each service or supply; diagnosis; provider identification number
 - File types: NOT PUBLISHED
@@ -1151,7 +1151,7 @@ Read date: 2026-10-09
 - Portal upload: YES
 - Portal: Blue Access for Members (BAM) Message Center
 - Portal path: Log in to BAM Message Center > create a new message > attach completed claim form and original provider bill > select Claims Submission Attachments > Send
-- Mail address: NOT PUBLISHED
+- Mail address: Blue Cross and Blue Shield of Illinois, P.O. Box 660603, Dallas, Texas 75266-0603
 - Fax: NOT PUBLISHED
 - Attach: Provider name and address; patient name; date each service or supply was provided; description of service or supply; diagnosis code; charge for each service or supply
 - File types: NOT PUBLISHED
@@ -1187,8 +1187,8 @@ Read date: 2026-10-09
 - Portal upload: YES
 - Portal: Blue Cross NC member portal
 - Portal path: Log in to the member portal > submit a medical claim online > enter claim information > upload a copy of the receipt > Submit; exact post-login menu label is UNREADABLE
-- Mail address: NOT PUBLISHED
-- Fax: NOT PUBLISHED
+- Mail address: Blue Cross and Blue Shield of North Carolina, P.O. Box 35, Durham, NC 27702
+- Fax: 866-990-1385
 - Attach: Provider name; provider address; provider Tax ID; procedure code for each service; diagnosis code; individual cost or separate charge for each service
 - File types: NOT PUBLISHED
 - File size limit: NOT PUBLISHED
@@ -1223,8 +1223,8 @@ Read date: 2026-10-09
 - Portal upload: YES
 - Portal: MedCost Member account
 - Portal path: Log in to the Member account > eForms; the exact post-login claim form and controls are UNREADABLE
-- Mail address: NOT PUBLISHED
-- Fax: NOT PUBLISHED
+- Mail address: MedCost Benefit Services d/b/a MBS Third Party Administrators in California, P.O. Box 25987, Winston-Salem, NC 27114-5987
+- Fax: (336) 774-4420
 - Attach: NOT PUBLISHED: the form permits an itemized bill instead of the provider page but does not enumerate required itemized-bill fields
 - File types: NOT PUBLISHED
 - File size limit: NOT PUBLISHED
@@ -1259,7 +1259,7 @@ Read date: 2026-10-09
 - Portal upload: NO
 - Portal: My Highmark
 - Portal path: No upload path: public form says submit the claim and itemized statement to the address on the ID card
-- Mail address: NOT PUBLISHED
+- Mail address: PLAN-DEPENDENT: Submit the claim and itemized statement to the address provided on the back of your ID card.
 - Fax: NOT PUBLISHED
 - Attach: Provider name and address on provider stationery; patient full name; each service date; service or supply or purchase type; charge
 - File types: NOT APPLICABLE
@@ -1296,7 +1296,7 @@ Read date: 2026-10-09
 - Portal upload: YES
 - Portal: IBX member portal
 - Portal path: Plan Selection > current health plan > QuickStart > View My Claims > Claims and Finances > Submit a New Claim > Continue > Medical > Next > Complete Online Form; alternative Upload Claim Form
-- Mail address: NOT PUBLISHED
+- Mail address: Claims Receipt Center, P.O. Box 211184, Eagan, MN 55121
 - Fax: NOT PUBLISHED
 - Attach: Diagnosis codes; procedure codes; costs for services; PDF form also asks diagnosis; dates; place of service; procedure description and code; diagnosis pointer; charges; units; paid and balance amounts; provider name and address and provider number
 - File types: NOT PUBLISHED
@@ -1334,8 +1334,8 @@ Read date: 2026-10-09
 - Portal upload: YES
 - Portal: UPMC Health Plan member site
 - Portal path: Documents and Forms > Forms and Guides > Get Form > Out-of-Network Care Claim Form
-- Mail address: NOT PUBLISHED
-- Fax: NOT PUBLISHED
+- Mail address: UPMC Health Plan/UPMC Health Benefits, Claims Department, PO Box 2999, Pittsburgh, PA 15230
+- Fax: 1-844-201-4655
 - Attach: Member full name; provider or facility name and address; service description; service date; amount charged; diagnosis or nature of illness or injury; proof of payment if paid; form instructions also name service type and charge for each service
 - File types: NOT PUBLISHED
 - File size limit: NOT PUBLISHED
@@ -1371,7 +1371,7 @@ Read date: 2026-10-09
 - Portal upload: NO
 - Portal: Anthem member account
 - Portal path: No upload path: ACA transparency page instructs complete form plus itemized bill and mail it
-- Mail address: NOT PUBLISHED
+- Mail address: Anthem Blue Cross and Blue Shield, P.O. Box 105187, Atlanta, GA 30348-5187
 - Fax: NOT PUBLISHED
 - Attach: Provider name and address; patient name; service provided; service date; amount for each service; diagnosis code; procedure code; tax ID
 - File types: NOT APPLICABLE
@@ -1408,7 +1408,7 @@ Read date: 2026-10-09
 - Portal upload: NO
 - Portal: Anthem member account
 - Portal path: No upload path: ACA transparency page instructs complete form plus itemized bill and mail it
-- Mail address: NOT PUBLISHED
+- Mail address: Anthem Blue Cross and Blue Shield, P.O. Box 105187, Atlanta, GA 30348-5187
 - Fax: NOT PUBLISHED
 - Attach: Provider name and address; patient name; service provided; service date; amount for each service; diagnosis code; procedure code; tax ID
 - File types: NOT APPLICABLE
@@ -1445,7 +1445,7 @@ Read date: 2026-10-09
 - Portal upload: YES
 - Portal: My Account
 - Portal path: Log in to My Account > Claims tab > Submit a Claim Online > enter requested information > upload required documents
-- Mail address: NOT PUBLISHED
+- Mail address: CAREFIRST BLUECROSS BLUESHIELD MAIL ADMINISTRATOR, P.O. BOX 14116, LEXINGTON, KY 40512-4116
 - Fax: NOT PUBLISHED
 - Attach: Provider letterhead with name and address; patient name; each service date; charge for each service; description of each service; provider tax identification number or NPI; provider signature; for psychotherapy, session length, session type, professional status, and license number when applicable
 - File types: .bmp; .jpg; .pdf; .png; .tiff
@@ -1481,7 +1481,7 @@ Read date: 2026-10-09
 - Portal upload: NO
 - Portal: AZ Blue member portal
 - Portal path: No upload path: ACA plan page provides a downloadable form and publishes only an offline submission route
-- Mail address: NOT PUBLISHED
+- Mail address: PLAN-DEPENDENT: ACA individual and family claims go to Blue Cross Blue Shield of Arizona, P.O. Box 2924, Phoenix, AZ 85062-2924; delegated vendors and other plans use their specific instructions.
 - Fax: NOT PUBLISHED
 - Attach: Billed charges; date of service; diagnosis code; group number; member ID; member name; provider name; patient name; birth field (label as printed); procedure code; provider ID number
 - File types: NOT APPLICABLE
@@ -1518,7 +1518,7 @@ Read date: 2026-10-09
 - Portal upload: NO
 - Portal: Banner|Aetna member portal
 - Portal path: No upload path: current member forms page links the Medical Benefits Request and the form directs the member to the claim destination on the ID card
-- Mail address: NOT PUBLISHED
+- Mail address: PLAN-DEPENDENT: Refer to the back of your ID card for claim mailing address.
 - Fax: NOT PUBLISHED
 - Attach: Patient name; date of service; condition treated; relationship to employee; type of service; or provider-completed service lines with place of service, procedure code, description, type of service, charge, units, diagnosis code, provider tax ID, NPI, and provider identity and address
 - File types: NOT APPLICABLE
@@ -1553,7 +1553,7 @@ Read date: 2026-10-09
 - Portal upload: NO
 - Portal: MyBlue / Member Central
 - Portal path: No upload path: Subscriber Claim Form directs the signed form and original itemized bill through an offline route
-- Mail address: NOT PUBLISHED
+- Mail address: BCBSMA, P.O. Box 986030, Boston, MA 02298
 - Fax: NOT PUBLISHED
 - Attach: Provider letterhead with provider name, address, NPI or license number, and credentials; patient name; dates of service; itemized charge for each date and service type; procedure codes using HCPCS or revenue codes; diagnosis codes; units for named therapy and other services
 - File types: NOT APPLICABLE
@@ -1590,7 +1590,7 @@ Read date: 2026-10-09
 - Portal upload: YES
 - Portal: HPHConnect secure member account
 - Portal path: Forms library > Health Care Reimbursement Claim Form > Complete online
-- Mail address: NOT PUBLISHED
+- Mail address: Harvard Pilgrim Health Care, P.O. Box 699183, Quincy, MA 02269
 - Fax: NOT PUBLISHED
 - Attach: Member full name and address; birth field (label as printed); plan ID; member signature; provider or facility name and address; TIN or NPI; diagnosis description, diagnosis code, or ICD-10 code; date of service; CPT code or brief illness or injury description; charge; proof of payment; other insurance information
 - File types: NOT PUBLISHED
@@ -1626,7 +1626,7 @@ Read date: 2026-10-09
 - Portal upload: NO
 - Portal: Tufts Health Plan secure member portal
 - Portal path: No upload path: the claim form directs submission through an offline route; the public portal feature list names claim status and EOB access but not claim submission
-- Mail address: NOT PUBLISHED
+- Mail address: Tufts Health Plan, Member Reimbursement Claims, P.O. Box 214, Canton, MA 02021
 - Fax: NOT PUBLISHED
 - Attach: Patient and subscriber information; provider name, address, telephone, license and state, and treatment setting; diagnosis code and description; service dates; procedure code and description; amount paid; total; proof of services; proof of payment
 - File types: NOT APPLICABLE
@@ -1697,8 +1697,8 @@ Read date: 2026-10-09
 - Portal upload: YES
 - Portal: Regence UMP member account
 - Portal path: Sign in > Submit a claim; public certificate identifies regence.com/member/submit-claim/
-- Mail address: NOT PUBLISHED
-- Fax: NOT PUBLISHED
+- Mail address: Regence BlueShield, Attn: UMP Claims, PO Box 1106, Lewiston, ID 83501-1106
+- Fax: 1-877-357-3418
 - Attach: Member name; UMP member ID including alpha prefix; procedure code and diagnosis code or description; date and type of service; provider name, address, telephone, NPI or tax identification number; itemized charges; other-plan EOB when UMP is secondary
 - File types: NOT PUBLISHED
 - File size limit: NOT PUBLISHED
@@ -1733,7 +1733,7 @@ Read date: 2026-10-09
 - Portal upload: YES
 - Portal: Premera member account Secure Inbox
 - Portal path: Sign in at premera.com > Secure Inbox > attach the completed Claim Reimbursement Request and required documentation to a secure email
-- Mail address: NOT PUBLISHED
+- Mail address: Premera Blue Cross, PO Box 91059, Seattle, WA 98111-9159
 - Fax: NOT PUBLISHED
 - Attach: Patient name; diagnosis using ICD-10; service dates; procedure code using CPT, HCPCS, CDT, or NDC as applicable; provider name and address; provider IRS tax identification number; itemized charge for each service; proof of payment when applicable
 - File types: NOT PUBLISHED
@@ -1805,8 +1805,8 @@ Read date: 2026-10-09
 - Portal upload: NO
 - Portal: myProvidence status view; My Collective for PEBB only
 - Portal path: No generic upload path: current form and member page publish an offline route. PEBB services on or after January 1, 2026 use My Collective > Activity > Submit a claim
-- Mail address: NOT PUBLISHED
-- Fax: NOT PUBLISHED
+- Mail address: Providence Health Plans, Attn: Claims Processing, P.O. Box 4327, Portland, OR 97208-4327
+- Fax: 503-574-5940
 - Attach: Dates and place of service; diagnosis codes; procedure codes; charge and amount paid; provider name, tax ID, and billing address; proof of payment; other coverage; employment or accident facts when applicable
 - File types: NOT APPLICABLE
 - File size limit: NOT APPLICABLE
@@ -1840,7 +1840,7 @@ Read date: 2026-10-09
 - Portal upload: NO
 - Portal: Member Dashboard status only
 - Portal path: No upload path: the current transparency page and claim form publish offline submission; Member Dashboard is published for EOB and status access
-- Mail address: NOT PUBLISHED
+- Mail address: MODA HEALTH PLANS, PO BOX 40384, PORTLAND, OR 97240
 - Fax: NOT PUBLISHED
 - Attach: For the itemized-receipt alternative: date of service, service provided, and amount. The CMS-1500 route prints patient, insured, provider, diagnosis, procedure, service-line, charge, and certification fields
 - File types: NOT APPLICABLE
@@ -1876,7 +1876,7 @@ Read date: 2026-10-09
 - Portal upload: YES
 - Portal: MemberConnect Online Claims Submission Portal
 - Portal path: Step 1 download and fill the claim form > Step 2 complete the Online Claim Form > enter Member ID, Member Name, Phone Number, Email, and Member Employer > upload up to three files > Submit
-- Mail address: NOT PUBLISHED
+- Mail address: PLAN-DEPENDENT: Reference the member's identification card; the claims submission address may vary based on payment location.
 - Fax: NOT PUBLISHED
 - Attach: Patient, subscriber, and employer identifiers; other coverage and Medicare facts; diagnosis; employment or accident facts; dates and place of service; procedure, description, diagnosis pointer, units, and charges; provider identity, tax ID or NPI, address, and credentials; totals and amount paid
 - File types: All except .exe, .bat, .com, and .vbs according to page validation
@@ -1912,7 +1912,7 @@ Read date: 2026-10-09
 - Portal upload: YES
 - Portal: HMSA My Account
 - Portal path: My Account > Forms from the drop-down arrow > Medical Receipts > select the appropriate button > Continue > upload invoices > complete the online form > Submit
-- Mail address: NOT PUBLISHED
+- Mail address: HMSA, P.O. Box 860, Honolulu, HI 96808-0860
 - Fax: NOT PUBLISHED
 - Attach: Procedure codes using CPT or HCPCS; diagnosis codes using ICD-10; individual cost per service; provider name and address; applicable NPI, provider tax ID, or state license number; member and subscriber information; date and place of service; units; total; other coverage or accident facts when applicable
 - File types: NOT PUBLISHED
@@ -1947,7 +1947,7 @@ Read date: 2026-10-09
 - Portal upload: YES
 - Portal: Blue Access for Members
 - Portal path: BAM Message Center > Create a new message > attach the completed form and original provider bill > select Claims Submission Attachments in the subject dropdown > Send
-- Mail address: NOT PUBLISHED
+- Mail address: Blue Cross and Blue Shield of Texas, P.O. Box 660044, Dallas, Texas 75266-0044
 - Fax: NOT PUBLISHED
 - Attach: Provider or organization name; patient name; diagnosis code; date each service was provided; description of each service or supply; charge for each service or supply
 - File types: NOT PUBLISHED
@@ -2018,7 +2018,7 @@ Read date: 2026-10-09
 - Portal upload: NOT PUBLISHED
 - Portal: WebTPA Member Portal or WebTPA app
 - Portal path: NOT PUBLISHED: the public portal feature list supports claim status and history but does not identify member claim upload; Whole Health Plan says to use instructions on the back of the digital ID card
-- Mail address: NOT PUBLISHED
+- Mail address: PLAN-DEPENDENT: All claims should be submitted to the address on the ID card.
 - Fax: NOT PUBLISHED
 - Attach: NOT PUBLISHED: the generic WebTPA form says attach all bills and correspondence but does not list required itemized-bill fields
 - File types: NOT PUBLISHED
@@ -2054,7 +2054,7 @@ Read date: 2026-10-09
 - Portal upload: NO
 - Portal: Asuris member account
 - Portal path: NO: current member reimbursement form publishes only a nonportal submission route
-- Mail address: NOT PUBLISHED
+- Mail address: Asuris Northwest Health, PO Box 1106, Lewiston, Idaho 83501
 - Fax: NOT PUBLISHED
 - Attach: provider name and address; National Provider Identifier; diagnosis and procedure codes; date of service; itemized charges; original receipts; cash register receipts are not accepted
 - File types: NOT PUBLISHED
@@ -2090,8 +2090,8 @@ Read date: 2026-10-09
 - Portal upload: NO
 - Portal: AvMed Member Portal
 - Portal path: NO: current medical reimbursement form and member resource page publish only nonportal submission routes
-- Mail address: NOT PUBLISHED
-- Fax: NOT PUBLISHED
+- Mail address: AvMed, Attention: Member Reimbursement, P.O. Box 569008, Miami, FL 33256
+- Fax: 305-671-4736
 - Attach: date each service was rendered; procedure code for each service; diagnosis code; description of service; provider contact information; provider Tax ID; proof of purchase
 - File types: NOT PUBLISHED
 - File size limit: NOT PUBLISHED
@@ -2125,7 +2125,7 @@ Read date: 2026-10-09
 - Portal upload: YES
 - Portal: Capital Blue Cross secure account
 - Portal path: Forms > Submit a claim > Medical (English); signed-in controls UNREADABLE
-- Mail address: NOT PUBLISHED
+- Mail address: Medical Claims Processing, PO Box 211457, Eagan, MN 55121-3057
 - Fax: NOT PUBLISHED
 - Attach: provider name and address; patient full name; date each service or supply was provided; place of service; procedure code for each unit or service and quantity; diagnosis code; amount paid; amount charged for each service or supply
 - File types: NOT PUBLISHED
@@ -2161,7 +2161,7 @@ Read date: 2026-10-09
 - Portal upload: YES
 - Portal: CareFirst Administrators member portal
 - Portal path: Log in > Submit an Out-of-Network Claim > follow the instructions
-- Mail address: NOT PUBLISHED
+- Mail address: PLAN-DEPENDENT: Refer to your identification card for mailing instructions.
 - Fax: NOT PUBLISHED
 - Attach: legible itemized bill; exact required bill fields NOT PUBLISHED
 - File types: NOT PUBLISHED
@@ -2232,7 +2232,7 @@ Read date: 2026-10-09
 - Portal upload: YES
 - Portal: Carelon Behavioral Health member portal
 - Portal path: Emblem Mental Health Claims > Submit your claim online > Carelon login > follow the prompts
-- Mail address: NOT PUBLISHED
+- Mail address: PLAN-DEPENDENT: Mail your form to the address on your member ID card.
 - Fax: NOT PUBLISHED
 - Attach: provider address and telephone; provider license or certification number; provider Tax ID or Social Security number; provider NPI; provider signature, stamp, computer-generated signature, or printed name; diagnosis; service or procedure; date of service; place of service; amount paid; provider specialty
 - File types: NOT PUBLISHED
@@ -2268,7 +2268,7 @@ Read date: 2026-10-09
 - Portal upload: YES
 - Portal: Excellus BlueCross BlueShield member account
 - Portal path: Log in > Submit Claims > complete claim form > Send to Us Electronically
-- Mail address: NOT PUBLISHED
+- Mail address: Excellus BlueCross BlueShield, P.O. Box 21146, Eagan, MN 55121-0146
 - Fax: NOT PUBLISHED
 - Attach: member full name; birth field; provider name and address on letterhead; provider credentials; provider employer identification number; provider NPI; date of each service; procedure code or description for each charge; charge for each service; diagnosis code or illness or injury; place of service; country and English translation for care outside the United States; prescription information when applicable
 - File types: NOT PUBLISHED for claim upload
@@ -2302,7 +2302,7 @@ Read date: 2026-10-09
 - Portal upload: NOT PUBLISHED
 - Portal: myFirstChoice
 - Portal path: UNREADABLE: signed-in Claims and Forms areas; no public claim-submission control is published
-- Mail address: NOT PUBLISHED
+- Mail address: PLAN-DEPENDENT: Use the Payor/Employer Group Search to locate the address for submitting claims; refer to the member's ID card for plan information.
 - Fax: NOT PUBLISHED
 - Attach: NOT PUBLISHED
 - File types: NOT PUBLISHED
@@ -2337,7 +2337,7 @@ Read date: 2026-10-09
 - Portal upload: NO
 - Portal: Geisinger member portal
 - Portal path: NO: the current Medical claim reimbursement form publishes only a nonportal route
-- Mail address: NOT PUBLISHED
+- Mail address: Geisinger Health Plan, P.O. Box 160, Glen Burnie, MD 21060
 - Fax: NOT PUBLISHED
 - Attach: receipt of payment with a description of services; itemized bills
 - File types: NOT PUBLISHED
@@ -2372,7 +2372,7 @@ Read date: 2026-10-09
 - Portal upload: NOT PUBLISHED
 - Portal: Health Net member account
 - Portal path: My Health Plan Coverage > My Claims > File a medical claim; an on-screen claim is published, but attachment upload is NOT PUBLISHED
-- Mail address: NOT PUBLISHED
+- Mail address: Health Net, LLC, Commercial Claims, PO Box 9040, Farmington, MO 63640-9040
 - Fax: NOT PUBLISHED
 - Attach: provider or facility name; provider or facility address; provider or facility telephone; provider Tax ID; date of service; diagnosis codes; procedure codes; proof of payment when the amount paid is more than $200
 - File types: NOT PUBLISHED
@@ -2407,8 +2407,8 @@ Read date: 2026-10-09
 - Portal upload: NO
 - Portal: HealthLink Medical Claim Form
 - Portal path: NO: the current claim form publishes only nonportal submission routes
-- Mail address: NOT PUBLISHED
-- Fax: NOT PUBLISHED
+- Mail address: HealthLink, P.O. Box 659986, San Antonio, TX 78265
+- Fax: (208) 519-4594
 - Attach: provider name and address; patient name; service provided; date of service; amount charged for each service; diagnosis code; procedure code; Tax ID; NPI
 - File types: NOT PUBLISHED
 - File size limit: NOT PUBLISHED
@@ -2442,7 +2442,7 @@ Read date: 2026-10-09
 - Portal upload: YES
 - Portal: My Highmark member account
 - Portal path: Surprise Billing > Claim and Assignment of Benefits Form Submission > submit a claim > log in; signed-in controls UNREADABLE
-- Mail address: NOT PUBLISHED
+- Mail address: Highmark Blue Cross Blue Shield, PO Box 4208, Buffalo, NY 14240
 - Fax: NOT PUBLISHED
 - Attach: patient full name; amount charged for each service or supply; date each service or supply was rendered; description of each service or supply; diagnosis or nature of illness for each service; provider or supplier name and address; prescription number and prescribing physician when applicable
 - File types: NOT PUBLISHED
@@ -2477,8 +2477,8 @@ Read date: 2026-10-09
 - Portal upload: YES
 - Portal: Johns Hopkins EHP member portal
 - Portal path: Claims & Costs > Claims & EOBs > reimbursement link at the top > complete the form > attach proof of payment
-- Mail address: NOT PUBLISHED
-- Fax: NOT PUBLISHED
+- Mail address: Employer Health Programs, 7231 Parkway Drive, Suite 100, Hanover, MD 21076
+- Fax: 410-424-4611
 - Attach: member demographic information; provider name and address; provider professional status; provider Tax ID and NPI; patient full name; dates of service; procedure codes and descriptions; diagnosis codes and descriptions; charge for each service; amount paid; balance due; proof of payment
 - File types: NOT PUBLISHED
 - File size limit: NOT PUBLISHED
@@ -2512,7 +2512,7 @@ Read date: 2026-10-09
 - Portal upload: NOT PUBLISHED
 - Portal: myLuminareHealth or employer white-label member portal
 - Portal path: NOT PUBLISHED universally; OhioHealthy publishes Messages > New Message > General Inquiry > subject Member Claim Submission > attach documents > Send
-- Mail address: NOT PUBLISHED
+- Mail address: PLAN-DEPENDENT: Use the mailing address for claims submission on the back of your member ID card; card information may vary by plan.
 - Fax: NOT PUBLISHED
 - Attach: NOT PUBLISHED universally; the OhioHealthy route names an itemized statement, proof of payment, and medical records when applicable
 - File types: NOT PUBLISHED
@@ -2547,8 +2547,8 @@ Read date: 2026-10-09
 - Portal upload: YES
 - Portal: MVP online account through Gia
 - Portal path: Sign In > Medical Claim Reimbursement
-- Mail address: NOT PUBLISHED
-- Fax: NOT PUBLISHED
+- Mail address: CLAIMS SUBMISSION, MVP HEALTH CARE, PO BOX 2207, SCHENECTADY NY 12301-2207
+- Fax: 518-395-1395
 - Attach: provider name and address on letterhead; provider Tax ID; provider NPI; patient full name; health plan identification number; HCPCS or CPT code for each service; place of service; date and charge for each service or supply; ICD-CM code; other carrier explanation of benefits when applicable
 - File types: NOT PUBLISHED
 - File size limit: NOT PUBLISHED
@@ -2582,8 +2582,8 @@ Read date: 2026-10-09
 - Portal upload: NOT PUBLISHED
 - Portal: Mass General Brigham Health Plan Member portal or Health Plan Member app
 - Portal path: Track costs and claims > behavioral health reimbursement e-form; attachment controls UNREADABLE
-- Mail address: NOT PUBLISHED
-- Fax: NOT PUBLISHED
+- Mail address: Mass General Brigham Health Plan Claims, 399 Revolution Drive, Suite 810, Somerville, MA 02145
+- Fax: 617-526-1902
 - Attach: provider name; provider address; NPI and/or provider Tax Identification Number; patient name; dates of service; itemized charge for each date and service type; CPT, HCPCS, or revenue code; units for each procedure code; diagnosis codes; foreign currency name when applicable; proof of payment
 - File types: NOT PUBLISHED
 - File size limit: NOT PUBLISHED
@@ -2617,8 +2617,8 @@ Read date: 2026-10-09
 - Portal upload: NO
 - Portal: PacificSource public claim instructions
 - Portal path: NO: the current claim page and claim form publish only nonportal submission routes
-- Mail address: NOT PUBLISHED
-- Fax: NOT PUBLISHED
+- Mail address: PacificSource Health Plans, PO Box 7068, Springfield, OR 97475-0068
+- Fax: 541-225-3632
 - Attach: patient name; date of service; procedure codes; ICD diagnosis codes; healthcare professional full name, credentials, address, phone, TIN, and NPI if assigned; total charge for each service; employer name and group number when applicable; accident details when applicable
 - File types: NOT PUBLISHED
 - File size limit: NOT PUBLISHED
@@ -2652,8 +2652,8 @@ Read date: 2026-10-09
 - Portal upload: YES
 - Portal: Select Health Claim Reimbursement web form
 - Portal path: selecthealth.org/claims > Claim Reimbursement
-- Mail address: NOT PUBLISHED
-- Fax: NOT PUBLISHED
+- Mail address: Select Health, P.O. Box 30192, Salt Lake City, Utah 84130-0192
+- Fax: 801-442-0204
 - Attach: provider or facility name; provider or facility Tax ID if available; NPI if available; provider phone; provider or facility address; service dates; billed amount; description of services; procedure codes; diagnosis code; proof of payment
 - File types: NOT PUBLISHED
 - File size limit: NOT PUBLISHED
@@ -2687,7 +2687,7 @@ Read date: 2026-10-09
 - Portal upload: NO
 - Portal: Sentara Health Plans claim instructions
 - Portal path: NO: the current instructions and reimbursement form publish only a nonportal submission route
-- Mail address: NOT PUBLISHED
+- Mail address: SENTARA HEALTH PLANS MEDICAL CLAIMS, Attention: Member Reimbursement, P.O. Box 8203, Kingston, NY 12402-8203
 - Fax: NOT PUBLISHED
 - Attach: provider Tax ID and NPI if applicable; provider name and address; member name and health plan ID; dates of service; diagnosis and service type; diagnosis and CPT codes and description; charge for each service; dated proof of payment
 - File types: NOT PUBLISHED
@@ -2722,7 +2722,7 @@ Read date: 2026-10-09
 - Portal upload: NO
 - Portal: Wellpoint Medical Claim Form
 - Portal path: NO: the current form and 2026-2027 Total Choice handbook publish only a nonportal submission route
-- Mail address: NOT PUBLISHED
+- Mail address: Wellpoint, P.O. Box 4095, Woburn, MA 01888
 - Fax: NOT PUBLISHED
 - Attach: provider name and address; patient name; service provided; date of service; amount charged for each service; diagnosis code; procedure code; Tax ID; proof of payment
 - File types: NOT PUBLISHED
