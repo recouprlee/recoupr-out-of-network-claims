@@ -7,7 +7,7 @@ metadata:
   version: "0.0.1"
   homepage: "https://recoupr.ai"
 ---
-# recoupr out-of-network claims
+# recoupr Out-of-Network Claims
 
 ## Task menu
 

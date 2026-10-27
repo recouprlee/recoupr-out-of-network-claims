@@ -1,4 +1,4 @@
-# recoupr out-of-network claims
+# recoupr Out-of-Network Claims
 
 ## Task menu
 
