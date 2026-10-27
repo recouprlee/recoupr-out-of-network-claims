@@ -14,9 +14,7 @@ Skill folder and name field: `recoupr-out-of-network-claims`.
 
 VERIFY AT LAUNCH.
 
-Download the ZIP from the latest release.
-
-Download `SKILL.md` from the latest release.
+Download the ZIP from the latest release. The `SKILL.md` inside it is only the menu; the routines and references sit beside it, so keep the folder together.
 
 Copy the paste-in prompt from the latest release.
 

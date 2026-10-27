@@ -20,8 +20,14 @@ DESCRIPTION = (
     "the claim themselves; nothing is filed for them."
 )
 ATLAS_POINTER = (
-    "For your insurer's filing route, ask me for my insurer and state, then use "
-    "the filing sheet at https://recoupr.ai/insurers/ for that insurer."
+    "Insurer filing details (form, address, portal, deadline, attachments) are "
+    "not in this prompt. When a routine needs references/payer-atlas.csv, "
+    "references/filing-steps.md, references/addresses.csv or a form file, ask me "
+    "for my insurer and state, then ask me to open https://recoupr.ai/insurers/, "
+    "pick my insurer, and paste that page's text here or upload its printed PDF. "
+    "Treat that page as the insurer's atlas row and filing steps. If I cannot get "
+    "it, say plainly that the route is not available and point me to the number "
+    "on my insurance card. Never guess a form, address, portal or deadline."
 )
 PASTE_REFERENCES = ("codes.md", "eob-codes.md", "appeals.md", "sources.md")
 HANDOUT_COUNT = 12
@@ -266,6 +272,9 @@ def render_paste_prompt(body, routine_names, routines, references):
         b"You are helping me with my own out-of-network therapy claim.\n"
         b"Follow the instructions below exactly.\n\n"
     )
+    output.extend(b"## Insurer filing details\n\n")
+    output.extend(ATLAS_POINTER.encode("utf-8"))
+    output.extend(b"\n\n")
     output.extend(body)
     for name in routine_names:
         append_section(output, f"## Routine: {name}", routines[name])
