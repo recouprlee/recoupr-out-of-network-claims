@@ -10,7 +10,7 @@ Read date: 2026-10-09
 
 | Section | Field label | Kind | Required | Filled from |
 | --- | --- | --- | --- | --- |
-| Payment selection | To pay Insured/Subscriber | assignment of benefits | REQUIRED | leave blank: assignment of benefits, do not sign |
+| Payment selection | To pay Insured/Subscriber | assignment of benefits | REQUIRED | select: To pay Insured/Subscriber (atlas payment_to_member) |
 | Payment selection | To get in-network credit for your cash payment to a provider | assignment of benefits | REQUIRED | leave blank: assignment of benefits, do not sign |
 | 1 | Insured/Subscriber Name (Last, First, Middle Initial) | subscriber | REQUIRED | insurance card, plan documents, or ask the person |
 | 1 | Mailing Address | subscriber | REQUIRED | insurance card, plan documents, or ask the person |

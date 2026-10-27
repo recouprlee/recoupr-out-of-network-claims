@@ -25,7 +25,7 @@ Read date: 2026-10-09
 | 3. Release | Patient's or authorized person's signature | member signature | REQUIRED | leave blank: person signs by hand |
 | 3. Release | Date | member signature | REQUIRED | leave blank: person signs by hand |
 | 4. Payment Authorization | Provider payment | assignment of benefits | REQUIRED: choose one | leave blank: assignment of benefits, do not sign |
-| 4. Payment Authorization | Policyholder payment (me) | assignment of benefits | REQUIRED: choose one | leave blank: assignment of benefits, do not sign |
+| 4. Payment Authorization | Policyholder payment (me) | assignment of benefits | REQUIRED: choose one | select: Policyholder payment (me) (atlas payment_to_member) |
 | 4. Payment Authorization | Patient's or authorized person's signature | member signature | REQUIRED | leave blank: person signs by hand |
 | 4. Payment Authorization | Date | member signature | REQUIRED | leave blank: person signs by hand |
 | Provider's Statement | Employee Information Name | subscriber | NOT PUBLISHED | insurance card, plan documents, or ask the person |

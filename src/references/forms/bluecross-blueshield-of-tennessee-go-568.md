@@ -49,6 +49,6 @@ Read date: 2026-10-09
 | Claim Information - Complete for all claims. | Care provided: numerical procedure codes | service line | REQUIRED | superbill |
 | Claim Information - Complete for all claims. | Charges: itemize each charge | service line | REQUIRED | superbill |
 | Claim Information - Complete for all claims. | Reason for visit: diagnosis code, or just describe why you got care | diagnosis | REQUIRED | superbill |
-| Authorization - Complete for all claims. | Pay benefits for this claim: To me, the subscriber (proof of payment required) / Directly to the provider of service | assignment of benefits | REQUIRED | leave blank: assignment of benefits, do not sign |
+| Authorization - Complete for all claims. | Pay benefits for this claim: To me, the subscriber (proof of payment required) / Directly to the provider of service | assignment of benefits | REQUIRED | select: To me, the subscriber (atlas payment_to_member) |
 | Authorization - Complete for all claims. | Signature | member signature | REQUIRED | leave blank: person signs by hand |
 | Authorization - Complete for all claims. | Date | member signature | REQUIRED | leave blank: person signs by hand |

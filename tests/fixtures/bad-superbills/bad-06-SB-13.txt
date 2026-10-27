@@ -1,0 +1,29 @@
+SENTINEL_BAD_SUPERBILL_06
+
+Client name: SENTINEL_CLIENT_NAME_BAD_06
+Identity date on card: SENTINEL_BIRTH_DATE_BAD_06
+Practice name: Example Counseling
+Practice address: SENTINEL_PROVIDER_ADDRESS_BAD_06
+Practice phone: SENTINEL_PROVIDER_PHONE_BAD_06
+Provider name: SENTINEL_PROVIDER_NAME_BAD_06
+Provider credentials: LCSW
+Provider license number: SENTINEL_PROVIDER_LICENSE_BAD_06
+Provider license state: EX
+NPI type: type 1
+NPI: SENTINEL_NPI_BAD_06_0000000000
+Tax ID type: company
+Tax ID: SENTINEL_TAX_ID_BAD_06_000000000
+
+Session 1
+Date of service: 0001-01-01
+CPT code: 90837
+Units: 1
+ICD-10 code: F99
+Diagnosis pointer: 1
+Charge: 150.00
+Amount paid: 150.00
+Place of service: 99
+Telehealth modifier:
+
+Total charge: 150.00
+Total paid: 150.00

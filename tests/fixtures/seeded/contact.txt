@@ -1,1 +1,1 @@
-SENTINEL_SEEDED_CONTACT_PATTERN_1: 000 000 0000, sentinel_client_email_1@example.org
+SENTINEL_SEEDED_CONTACT_PATTERN_1: 0000000001, sentinel_client_email_1@example.org

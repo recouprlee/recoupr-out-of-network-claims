@@ -45,7 +45,7 @@ Read date: 2026-10-09
 | OTHER INSURANCE INFORMATION | SEX: Male / Female | other coverage | CONDITIONAL | insurance card, plan documents, or ask the person |
 | OTHER INSURANCE INFORMATION | c. EMPLOYER'S NAME OR SCHOOL NAME | other coverage | CONDITIONAL | ask the person |
 | OTHER INSURANCE INFORMATION | d. INSURANCE PLAN NAME OR PROGRAM NAME | other coverage | CONDITIONAL | insurance card, plan documents, or ask the person |
-| 12. SHOULD PAYMENT BE MADE TO | SELF Yes / No | assignment of benefits | REQUIRED | leave blank: assignment of benefits, do not sign |
+| 12. SHOULD PAYMENT BE MADE TO | SELF Yes / No | assignment of benefits | REQUIRED | select: SELF (atlas payment_to_member) |
 | 12. SHOULD PAYMENT BE MADE TO | PROVIDER Yes / No | assignment of benefits | REQUIRED | leave blank: assignment of benefits, do not sign |
 | Out-of-Plan Reimbursement Form | 13. DESCRIBE CONDITION OR ILLNESS | diagnosis | REQUIRED | superbill |
 | Out-of-Plan Reimbursement Form | WHERE WERE SERVICES RENDERED? Urgent Care Ctr / Hospital / Office | service line | REQUIRED | superbill |

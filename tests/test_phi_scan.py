@@ -98,6 +98,25 @@ class PhiScanTests(unittest.TestCase):
         self.assertEqual(2, result.returncode, result.stdout + result.stderr)
         self.assertIn(": ssn\n", result.stdout)
 
+    def test_repeated_digit_ten_digit_run_passes(self):
+        with tempfile.TemporaryDirectory(dir=ROOT / "tests") as directory:
+            target = Path(directory) / "sentinel-npi.txt"
+            target.write_text("SENTINEL_NPI_1: 0000000000\n", encoding="utf-8")
+            result = self.run_scan(target)
+        self.assertEqual(0, result.returncode, result.stdout + result.stderr)
+        self.assertIn("clean", result.stdout.lower())
+
+    def test_non_repeated_ten_digit_number_reports_contact(self):
+        content = (
+            ROOT / "tests" / "fixtures" / "seeded" / "contact.txt"
+        ).read_text(encoding="utf-8")
+        with tempfile.TemporaryDirectory(dir=ROOT / "tests") as directory:
+            target = Path(directory) / "sentinel-phone.txt"
+            target.write_text(content, encoding="utf-8")
+            result = self.run_scan(target)
+        self.assertEqual(2, result.returncode, result.stdout + result.stderr)
+        self.assertIn(": contact\n", result.stdout)
+
 
 if __name__ == "__main__":
     unittest.main()

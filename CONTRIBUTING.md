@@ -38,6 +38,8 @@ run on them.
 Fixtures use obvious `SENTINEL_` tokens for every person-like field. Seeded
 scanner fixtures must also carry an obvious sentinel marker. Never use a real
 name, birth date, address, contact value, member ID, policy ID or claim ID.
+A contiguous run of ten identical digits is treated as a sentinel, not a phone
+number.
 
 Do not use em dash or en dash characters. Write the company name as `recoupr`
 in lowercase. The personal data scan runs in CI and blocks a merge on any hit.

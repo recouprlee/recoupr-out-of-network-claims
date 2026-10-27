@@ -16,9 +16,9 @@ Read date: 2026-10-09
 | Member information | PATIENT'S ADDRESS | member | REQUIRED | insurance card, plan documents, or ask the person |
 | Member information | PATIENT'S PHONE # | member | REQUIRED | insurance card, plan documents, or ask the person |
 | Member information | birth field (label as printed) | member | REQUIRED | insurance card, plan documents, or ask the person |
-| Alternate payee | PAYEE NAME | other | CONDITIONAL | ask the person |
-| Alternate payee | PAYEE ADDRESS | other | CONDITIONAL | ask the person |
-| Alternate payee | PAYEE PHONE # | other | CONDITIONAL | ask the person |
+| Alternate payee | PAYEE NAME | other | CONDITIONAL | leave blank: assignment of benefits, do not sign |
+| Alternate payee | PAYEE ADDRESS | other | CONDITIONAL | leave blank: assignment of benefits, do not sign |
+| Alternate payee | PAYEE PHONE # | other | CONDITIONAL | leave blank: assignment of benefits, do not sign |
 | Service information | DATES OF SERVICE | service line | CONDITIONAL | superbill |
 | Service information | PLACE OF SERVICE (OFFICE, TELEHEALTH, URGENT/ER, HOSPITAL, PHARMACY, HOME, ETC.) | service line | CONDITIONAL | superbill |
 | Service information | DIAGNOSIS CODES (ICD-10 CODES REQUIRED) | diagnosis | CONDITIONAL | superbill |

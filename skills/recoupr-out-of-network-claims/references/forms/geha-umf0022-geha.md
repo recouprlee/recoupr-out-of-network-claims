@@ -17,7 +17,7 @@ Read date: 2026-10-09
 | Personal information | Patient name | member | NOT PUBLISHED | insurance card, plan documents, or ask the person |
 | Personal information | birth field (label as printed) | member | NOT PUBLISHED | insurance card, plan documents, or ask the person |
 | Personal information | Subscriber phone number and/or email address | subscriber | NOT PUBLISHED | insurance card, plan documents, or ask the person |
-| Personal information | Issue payment to Member | assignment of benefits | NOT PUBLISHED | leave blank: assignment of benefits, do not sign |
+| Personal information | Issue payment to Member | assignment of benefits | NOT PUBLISHED | select: Issue payment to Member (atlas payment_to_member) |
 | Personal information | Issue payment to Provider | assignment of benefits | NOT PUBLISHED | leave blank: assignment of benefits, do not sign |
 | Personal information | Date of service (mm/dd/yyyy) | service line | NOT PUBLISHED | superbill |
 | Personal information | Facility name | provider | NOT PUBLISHED | superbill |

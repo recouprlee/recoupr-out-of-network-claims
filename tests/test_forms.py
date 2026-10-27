@@ -17,6 +17,28 @@ IDENTITY_LABELS = (
     "Read date",
 )
 TABLE_HEADER = ["Section", "Field label", "Kind", "Required", "Filled from"]
+PAYEE_LABEL_RE = re.compile(
+    r"\b(?:pay|payment)\s+(?:benefits\s+)?(?:to\s+)?"
+    r"(?:member|provider|insured|subscriber|policyholder)\b"
+    r"|\b(?:member|provider|policyholder)\s+payment\b"
+    r"|\bpay benefits (?:directly to|for this claim)\b"
+    r"|\bbenefits paid directly to\b"
+    r"|\bissue payment to\b"
+    r"|\bauthorize payment\b"
+    r"|\baccept assignment\b"
+    r"|\bassignment of benefits\b"
+    r"|\bdirect payment\b"
+    r"|\bpayee\b"
+    r"|\breimburse(?:ment|d)?\s+(?:to|payable to)\b",
+    re.IGNORECASE,
+)
+PAYEE_FILLED_FROM_RE = re.compile(
+    r"^(?:select: .+ \(atlas payment_to_member\)"
+    r"|leave blank: assignment of benefits, do not sign"
+    r"|ask the person: the atlas does not state the member option "
+    r"\(atlas payment_to_member is NOT PUBLISHED\))$"
+)
+NON_PAYEE_PAYMENT_RE = re.compile(r"^Did you make payment to provider\?", re.IGNORECASE)
 
 
 def slug(value):
@@ -88,6 +110,55 @@ class FormsTests(unittest.TestCase):
                 re.findall(rf"`{re.escape(path.name)}`", index_text)
             )
             self.assertEqual(1, references, path.name)
+
+    def test_payee_fields_use_atlas_shapes(self):
+        for path in sorted(FORMS.glob("*.md")):
+            if path.name == "INDEX.md":
+                continue
+            for line in path.read_text(encoding="utf-8").splitlines():
+                cells = table_cells(line) if line.strip().startswith("|") else []
+                if (
+                    len(cells) != 5
+                    or not PAYEE_LABEL_RE.search(cells[1])
+                    or NON_PAYEE_PAYMENT_RE.search(cells[1])
+                ):
+                    continue
+                with self.subTest(path=path.name, field=cells[1]):
+                    self.assertRegex(cells[4], PAYEE_FILLED_FROM_RE)
+
+    def test_bcbstx_member_payment_is_selected(self):
+        path = (
+            FORMS
+            / "blue-cross-and-blue-shield-of-texas-hcsc-including-ers-healthselect-730526.md"
+        )
+        rows = [
+            table_cells(line)
+            for line in path.read_text(encoding="utf-8").splitlines()
+            if line.strip().startswith("|")
+        ]
+        target = next(row for row in rows if row[1] == "To pay Insured/Subscriber")
+        self.assertTrue(target[4].startswith("select:"), target[4])
+
+    def test_selected_payee_options_are_named_by_the_atlas(self):
+        with ATLAS.open(newline="", encoding="utf-8") as handle:
+            atlas_rows = list(csv.DictReader(handle))
+        by_filename = {
+            f"{slug(row['insurer'])}-{slug(row['member_form_number'])}.md": row
+            for row in atlas_rows
+        }
+        for path in sorted(FORMS.glob("*.md")):
+            if path.name == "INDEX.md":
+                continue
+            for line in path.read_text(encoding="utf-8").splitlines():
+                cells = table_cells(line) if line.strip().startswith("|") else []
+                if len(cells) != 5 or not cells[4].startswith("select: "):
+                    continue
+                with self.subTest(path=path.name, field=cells[1]):
+                    self.assertIn(path.name, by_filename)
+                    option = cells[4].removeprefix("select: ").removesuffix(
+                        " (atlas payment_to_member)"
+                    )
+                    self.assertIn(option, by_filename[path.name]["payment_to_member"])
 
 
 if __name__ == "__main__":

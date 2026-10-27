@@ -4,6 +4,7 @@
 # Reference files describe insurers, which have public phone numbers and
 # capitalized names. They never hold a person's data, so those two patterns are
 # skipped there while email, date, identifier-value and SSN patterns still run.
+# A contiguous run of ten identical digits is a sentinel, not a phone number.
 
 import argparse
 import os
@@ -35,7 +36,8 @@ EMAIL_RE = re.compile(
     r"[A-Za-z0-9](?:[A-Za-z0-9.-]*[A-Za-z0-9])?\.[A-Za-z]{2,63}\b"
 )
 PHONE_RE = re.compile(
-    r"(?<!\d)(?:\(\d{3}\)|\d{3})[ .-]?\d{3}[ .-]?\d{4}(?!\d)"
+    r"(?<!\d)(?!(\d)\1{9}(?!\d))"
+    r"(?:\(\d{3}\)|\d{3})[ .-]?\d{3}[ .-]?\d{4}(?!\d)"
 )
 IGNORED_DIRECTORY_NAMES = {".git", "dist", "__pycache__"}
 REPOSITORY_ROOT = Path(__file__).resolve().parents[1]
