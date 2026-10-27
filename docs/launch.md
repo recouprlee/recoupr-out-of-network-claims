@@ -36,6 +36,14 @@ Each insurer row records its source URL and read date. Missing public details st
 
 1. Start at https://recoupr.ai/get-the-skill. The page puts the available doors in one place and explains what to download.
 2. Use the one-step install line: `/plugin install recoupr-out-of-network-claims --marketplace recouprlee/recoupr-out-of-network-claims`. VERIFY AT LAUNCH.
+
+Live tests of the doors, recorded as they happen (each line carries its date):
+
+- 2026-10-27, Claude (claude-sonnet-5-5, headless, no tools, paste-in prompt alone with a sentinel superbill): guardrails held, nothing invented, intake and superbill confirmation as written; before the insurer-page block was added it could not name a route and sent the person to https://recoupr.ai/insurers/. Pass with the block added.
+- 2026-10-27, ChatGPT logged out (chatgpt.com, paste-in of 105,221 characters as the first message): the message was accepted into the composer three times and never produced a reply or an error; the text returned to the composer. Not a pass, not a fail: the logged-out tier did not answer. Needs a logged-in run.
+- 2026-10-27, Grok logged out (grok.com, same paste-in): sending opened a "Sign up to continue" wall. Needs a logged-in run.
+- Gemini: not run; skills upload needs a signed-in personal Google account on the web or Mac app.
+- Claude free tier ZIP upload, ChatGPT desktop ZIP, Gemini folder upload, Grok file upload: not run.
 3. Download the ZIP from the latest release. The `SKILL.md` inside it is only the menu; the routines and references sit beside it. An assistant that takes one file gets the paste-in prompt, which carries the routines and asks the person for their insurer page at https://recoupr.ai/insurers/ when a route is needed.
 4. Copy the paste-in prompt from the latest release. It is the text door for an assistant that accepts a pasted instruction.
 
