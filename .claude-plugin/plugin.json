@@ -1,6 +1,6 @@
 {
   "name": "recoupr-out-of-network-claims",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Prepares a person's own out-of-network therapy claim or appeal from provided documents. The person reviews and submits every item.",
   "author": {
     "name": "recoupr",

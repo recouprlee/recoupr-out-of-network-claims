@@ -120,8 +120,10 @@ def check_print_paragraphs(printable, source_markdown, label):
 
 
 def check(root, dist_dir):
-    body, routine_names, routines, references, templates = build.load_sources(root)
-    expected_skill = build.render_skill_markdown(body, routine_names)
+    body, version, routine_names, routines, references, templates = (
+        build.load_sources(root)
+    )
+    expected_skill = build.render_skill_markdown(body, routine_names, version)
     expected_paste = build.render_paste_prompt(
         body, routine_names, routines, references
     )
@@ -141,6 +143,10 @@ def check(root, dist_dir):
     if frontmatter.get("description") != build.DESCRIPTION:
         raise DriftError(
             f"{build.SKILL_NAME}/SKILL.md: description does not match required text"
+        )
+    if frontmatter.get("metadata", {}).get("version") != version:
+        raise DriftError(
+            f"{build.SKILL_NAME}/SKILL.md: version does not match source"
         )
     if not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", frontmatter["name"]):
         raise DriftError(f"{build.SKILL_NAME}/SKILL.md: name is not valid")

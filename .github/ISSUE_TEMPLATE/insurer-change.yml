@@ -1,0 +1,26 @@
+# The founder must approve this document before publication or use.
+name: Insurer row change
+description: Report a change shown by an insurer's public source
+title: "[insurer change] "
+body:
+  - type: markdown
+    attributes:
+      value: Use public sources only. Do not include personal data.
+  - type: input
+    id: insurer
+    attributes:
+      label: Insurer
+    validations:
+      required: true
+  - type: input
+    id: source_url
+    attributes:
+      label: Public source URL
+    validations:
+      required: true
+  - type: textarea
+    id: change
+    attributes:
+      label: What changed
+    validations:
+      required: true

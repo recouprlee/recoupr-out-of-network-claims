@@ -1,3 +1,4 @@
+import csv
 import re
 import subprocess
 import sys
@@ -25,6 +26,16 @@ ROOT_DOCS = (
     ROOT / "README.md",
 )
 WORD_RE = re.compile(r"\b[\w']+\b")
+MISSION = (
+    "recoupr exists to fix the out-of-network claim mess. Out-of-network "
+    "therapy claims should be frictionless, reliable and free for the client. "
+    "That has been the mission since day one. Simple is handing the tools "
+    "straight to the client, keeping private-pay therapists a thousand miles "
+    "from any insurance portal, and giving it all away. When the claim is "
+    "simple, you recoup your out-of-pocket cost and stay in therapy longer. "
+    "No company should charge you, or take a cut of your own insurance money, "
+    "to help you understand your policy. recoup what matters."
+)
 
 
 def read(path):
@@ -40,7 +51,8 @@ class DocumentationTests(unittest.TestCase):
         self.assertTrue(DOCS.is_dir(), "docs directory is missing")
         for path in REQUIRED_DOCS + ROOT_DOCS:
             self.assertTrue(path.is_file(), f"{path.relative_to(ROOT)} is missing")
-        return ROOT_DOCS + tuple(sorted(DOCS.rglob("*.md")))
+        docs = tuple(sorted(path for path in DOCS.rglob("*") if path.is_file()))
+        return ROOT_DOCS + docs
 
     def test_founder_approval_is_at_the_top(self):
         for path in self.all_documents():
@@ -57,13 +69,17 @@ class DocumentationTests(unittest.TestCase):
                 self.assertNotIn(chr(0x2013), text)
 
     def test_company_name_stays_lowercase(self):
+        capitalized_company = chr(82) + "ecoupr"
+        capitalized_verb = chr(82) + "ecoup"
         sentence_start = re.compile(
-            r"(?:\A|[.!?]\s+|\n)\s*(?:[#>*+-]+\s*)?Recoup\b"
+            r"(?:\A|[.!?]\s+|\n)\s*(?:[#>*+-]+\s*)?"
+            + capitalized_verb
+            + r"\b"
         )
         for path in self.all_documents():
             with self.subTest(path=path.relative_to(ROOT)):
                 text = read(path)
-                self.assertNotIn("Recoupr", text)
+                self.assertNotIn(capitalized_company, text)
                 self.assertIsNone(sentence_start.search(text))
 
     def test_forbidden_release_language_is_absent(self):
@@ -103,6 +119,52 @@ class DocumentationTests(unittest.TestCase):
         self.assertGreaterEqual(count, 550)
         self.assertLessEqual(count, 850)
 
+    def test_launch_contains_the_mission_verbatim(self):
+        self.assertIn(MISSION, read(DOCS / "launch.md"))
+
+    def test_launch_research_counts_match_references(self):
+        atlas_path = ROOT / "src" / "references" / "payer-atlas.csv"
+        with atlas_path.open(newline="", encoding="utf-8") as handle:
+            insurer_count = len(list(csv.DictReader(handle)))
+        form_count = len(
+            [
+                path
+                for path in (ROOT / "src" / "references" / "forms").glob("*.md")
+                if path.name != "INDEX.md"
+            ]
+        )
+        launch = read(DOCS / "launch.md")
+        self.assertEqual(76, insurer_count)
+        self.assertEqual(77, form_count)
+        self.assertIn(f"{insurer_count} insurers'", launch)
+        self.assertIn(f"{form_count} form files", launch)
+
+    def test_newsletter_is_under_400_words(self):
+        newsletter = read(DOCS / "newsletter" / "issue-01.md")
+        self.assertLess(word_count(newsletter), 400)
+
+    def test_newsletter_fact_matches_the_texas_atlas_row(self):
+        atlas_path = ROOT / "src" / "references" / "payer-atlas.csv"
+        with atlas_path.open(newline="", encoding="utf-8") as handle:
+            rows = list(csv.DictReader(handle))
+        row = next(
+            item
+            for item in rows
+            if item["insurer"]
+            == "Blue Cross and Blue Shield of Texas (HCSC), including ERS HealthSelect"
+        )
+        self.assertEqual("TX", row["states"])
+        self.assertNotEqual("NOT PUBLISHED", row["member_form_url"])
+        newsletter = read(DOCS / "newsletter" / "issue-01.md")
+        for value in (
+            row["insurer"],
+            row["member_form_name"],
+            row["member_form_url"],
+            row["source_url"],
+            row["verified_on"],
+        ):
+            self.assertIn(value, newsletter)
+
     def test_every_url_uses_https(self):
         bare_domain = re.compile(
             r"(?<!@)(?<!https://)\b(?:[a-z0-9-]+\.)+(?:ai|com|gov|io|net|org)\b",
@@ -112,7 +174,8 @@ class DocumentationTests(unittest.TestCase):
             with self.subTest(path=path.relative_to(ROOT)):
                 text = read(path)
                 self.assertNotIn("http://", text)
-                self.assertIsNone(bare_domain.search(text))
+                without_https_urls = re.sub(r"https://[^\s<>)]+", "", text)
+                self.assertIsNone(bare_domain.search(without_https_urls))
 
     def test_readme_contains_install_line(self):
         self.assertIn(INSTALL_LINE, read(ROOT / "README.md"))

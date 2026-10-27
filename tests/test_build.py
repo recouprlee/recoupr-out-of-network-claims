@@ -78,7 +78,13 @@ class BuildTests(unittest.TestCase):
         self.assertIn(f"description: {DESCRIPTION}\n", text)
         self.assertIn("license: Apache-2.0\n", text)
         self.assertIn("  author: recoupr\n", text)
-        self.assertIn('  version: "0.0.1"\n', text)
+        source = (self.work_root / "src" / "skill.md").read_text(encoding="utf-8")
+        version = re.search(
+            r'^  version: "([0-9]+\.[0-9]+\.[0-9]+)"$',
+            source,
+            re.MULTILINE,
+        ).group(1)
+        self.assertIn(f'  version: "{version}"\n', text)
         self.assertIn('  homepage: "https://recoupr.ai"\n', text)
         name = re.search(r"^name: (.+)$", text, re.MULTILINE).group(1)
         description = re.search(r"^description: (.+)$", text, re.MULTILINE).group(1)

@@ -10,6 +10,9 @@ order:
 Every row must have `source_url` and `verified_on`. Use a public source. Do not
 add personal data.
 
+Use the `Insurer row change` issue form to report a change. Include the public
+source URL and what changed. Do not include personal data.
+
 ## Local checks
 
 Run these commands from the repository root:
