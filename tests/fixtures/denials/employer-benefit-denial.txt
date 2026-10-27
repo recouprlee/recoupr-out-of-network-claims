@@ -1,0 +1,19 @@
+SENTINEL_DENIAL_CASE_43
+
+EOB block
+Client name: SENTINEL_CLIENT_NAME_43
+Member ID: SENTINEL_MEMBER_ID_43
+Claim number: SENTINEL_CLAIM_NUMBER_43
+Insurer: SENTINEL_INSURER_NAME_43
+Plan type: employer
+Date of service: 2026-03-10
+EOB notice date: 2026-03-31
+Adjustment code: CARC 50
+EOB reason: payer medical necessity determination
+
+Letter block
+Denial notice date: 2026-03-31
+Date received: NOT PROVIDED
+Appeal deadline printed in letter: NOT PUBLISHED
+Letter reason: The payer states that the service does not meet its medical necessity rule.
+Appeal rights paragraph: The member may request an internal appeal.

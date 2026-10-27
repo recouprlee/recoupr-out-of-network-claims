@@ -1,0 +1,19 @@
+SENTINEL_DENIAL_CASE_42
+
+EOB block
+Client name: SENTINEL_CLIENT_NAME_42
+Member ID: SENTINEL_MEMBER_ID_42
+Claim number: SENTINEL_CLAIM_NUMBER_42
+Insurer: SENTINEL_INSURER_NAME_42
+Plan type: employer
+Date of service: 2026-02-03
+EOB notice date: 2026-02-15
+Adjustment code: RARC N290
+EOB reason: rendering provider primary identifier is missing or invalid
+
+Letter block
+Denial notice date: 2026-02-15
+Date received: NOT PROVIDED
+Appeal deadline printed in letter: NOT PUBLISHED
+Letter reason: Provider identifying information is needed before processing.
+Appeal rights paragraph: A written appeal may be requested.

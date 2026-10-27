@@ -1,0 +1,19 @@
+SENTINEL_DENIAL_CASE_41
+
+EOB block
+Client name: SENTINEL_CLIENT_NAME_41
+Member ID: SENTINEL_MEMBER_ID_41
+Claim number: SENTINEL_CLAIM_NUMBER_41
+Insurer: SENTINEL_INSURER_NAME_41
+Plan type: employer
+Date of service: 2026-01-02
+EOB notice date: 2026-01-10
+Adjustment code: CARC 252
+EOB reason: attachment or documentation required
+
+Letter block
+Denial notice date: 2026-01-10
+Date received: NOT PROVIDED
+Appeal deadline printed in letter: NOT PUBLISHED
+Letter reason: Send the missing attachment identified in the notice.
+Appeal rights paragraph: A written appeal may be requested.

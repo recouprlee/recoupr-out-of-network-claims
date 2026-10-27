@@ -1,0 +1,19 @@
+SENTINEL_DENIAL_CASE_44
+
+EOB block
+Client name: SENTINEL_CLIENT_NAME_44
+Member ID: SENTINEL_MEMBER_ID_44
+Claim number: SENTINEL_CLAIM_NUMBER_44
+Insurer: SENTINEL_INSURER_NAME_44
+Plan type: individual
+Date of service: 2026-04-08
+EOB notice date: 2026-04-30
+Adjustment code: CARC 204
+EOB reason: service not covered under the current benefit plan
+
+Letter block
+Denial notice date: 2026-04-30
+Date received: NOT PROVIDED
+Appeal deadline printed in letter: NOT PUBLISHED
+Letter reason: The service is excluded under the plan's current coverage terms.
+Appeal rights paragraph: The member may request an internal appeal and eligible external review.
