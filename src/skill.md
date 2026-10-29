@@ -1,7 +1,7 @@
 ---
 name: recoupr-out-of-network-claims
 metadata:
-  version: "0.1.0"
+  version: "0.2.0"
 ---
 # recoupr Out-of-Network Claims
 
@@ -14,6 +14,7 @@ metadata:
 - **appeal-my-denial**: Say "Help me prepare my appeal."
 - **client-handout**: Say "Make a client handout."
 - **superbill-template**: Say "Make a superbill template."
+- **set-up-my-ehr-superbill**: Say "Set up superbills in my EHR."
 
 ## Guardrails
 
