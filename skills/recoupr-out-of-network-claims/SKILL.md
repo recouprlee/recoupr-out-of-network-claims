@@ -4,7 +4,7 @@ description: Prepares a person's own out-of-network therapy insurance claim or a
 license: Apache-2.0
 metadata:
   author: recoupr
-  version: "0.1.0"
+  version: "0.2.0"
   homepage: "https://recoupr.ai"
 ---
 # recoupr Out-of-Network Claims
@@ -18,6 +18,7 @@ metadata:
 - **appeal-my-denial**: Say "Help me prepare my appeal."
 - **client-handout**: Say "Make a client handout."
 - **superbill-template**: Say "Make a superbill template."
+- **set-up-my-ehr-superbill**: Say "Set up superbills in my EHR."
 
 ## Guardrails
 
@@ -36,3 +37,4 @@ Documents go into the person's own assistant under that assistant's terms and ne
 - [appeal-my-denial](references/routines/appeal-my-denial.md)
 - [client-handout](references/routines/client-handout.md)
 - [superbill-template](references/routines/superbill-template.md)
+- [set-up-my-ehr-superbill](references/routines/set-up-my-ehr-superbill.md)

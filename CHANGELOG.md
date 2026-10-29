@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.0, 10-29-2026
+
+### Added
+
+- `set-up-my-ehr-superbill` walks a therapist or practice administrator through setting up their EHR so every superbill carries the fields the claim check looks for. It uses the per-system guide from https://recoupr.ai/for-therapists/superbill-setup/, falls back to a generic field checklist when there is no guide, and finishes by running `check-my-superbill` on a redacted sample.
+
 ## 0.1.0, 10-27-2026
 
 ### Seven routines

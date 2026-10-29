@@ -18,7 +18,7 @@ The paste-in door was tested in October 2026 on Claude, ChatGPT, Gemini and Grok
 
 ## What is inside
 
-Seven routines, in `src/routines/`:
+Eight routines, in `src/routines/`:
 
 | Routine | What it does |
 | --- | --- |
@@ -29,6 +29,7 @@ Seven routines, in `src/routines/`:
 | `appeal-my-denial` | Prepares a denial response, an appeal letter and the attachment list |
 | `client-handout` | Makes a one-page handout for a practice from public facts and one insurer row |
 | `superbill-template` | Makes a blank superbill template from public practice facts |
+| `set-up-my-ehr-superbill` | Walks a therapist through setting up their EHR so every superbill is complete, using the per-system guide from https://recoupr.ai/for-therapists/superbill-setup/ |
 
 References, in `src/references/`: the insurer atlas (76 insurers, every row with a public source URL and a read date), filing steps, mailing addresses, member forms, CPT and ICD-10 notes, EOB codes, appeal rules and the source list. Three small scripts in `scripts/` check a superbill's structure, compute appeal deadlines and estimate a benefit. They use only the Python standard library; the routines run them when a code runtime is available and fall back to the written rules when it is not.
 

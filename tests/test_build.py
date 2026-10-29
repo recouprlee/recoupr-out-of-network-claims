@@ -26,6 +26,7 @@ ROUTINES = (
     "appeal-my-denial",
     "client-handout",
     "superbill-template",
+    "set-up-my-ehr-superbill",
 )
 ATLAS_POINTER = (
     "Insurer filing details (form, address, portal, deadline, attachments) are "
