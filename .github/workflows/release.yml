@@ -18,7 +18,7 @@ jobs:
           python-version: "3.12"
       - run: python3 tools/build.py
       - name: Create GitHub release
-        uses: softprops/action-gh-release@72f2c25fcb47643c292f7107632f7a47c1df5cd8
+        uses: softprops/action-gh-release@8a0cd651e5b2365bd640854a3fa5dfc70e4875f3
         with:
           files: |
             dist/recoupr-out-of-network-claims.zip
